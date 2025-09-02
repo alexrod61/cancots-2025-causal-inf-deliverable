@@ -10,4 +10,4 @@
 
 **Team leader during group work sessions:** [G. Alexi Rodríguez-Arelis](https://alexrod.netlify.app/) (UBC).
 
-> **To check all the elements of this working group's final deliverable, including the initial presentation and the CanCOTS background, [**click here**](https://alexrod61.github.io/cancots-2025-causal-inf/).**
+> **To check all the elements of this working group's final deliverable, including the initial presentation and the CanCOTS background, [**click here**](https://alexrod61.github.io/cancots-2025-causal-inf-deliverable/).**
