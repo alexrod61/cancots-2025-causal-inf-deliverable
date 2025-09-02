@@ -1,0 +1,70 @@
+project:
+  type: website
+  output-dir: docs
+  preview:
+    port: 7354
+    browser: true
+  render:
+    - "./*.qmd"
+    - "website/*.qmd"
+    - "website/slides/*.qmd"
+  resources:
+    - website/slides
+
+website:
+  title: "CanCOTS 2025"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+        
+    right:
+      - href: references.qmd
+      - icon: github
+        href: https://github.com/alexrod61/cancots-2025-causal-inf
+        
+    foreground: "#FBBA72"
+    background: "#BC5D2E"
+    
+  repo-url: https://github.com/alexrod61/cancots-2025-causal-inf
+
+  sidebar:
+    - style: docked
+      type: light
+      background: "#DE9151"
+      foreground: dark
+      contents:
+      - href: website/01-intro-slides.qmd
+      - href: website/02-course-outline.qmd
+      - href: website/03-course-roadmap.qmd
+      - href: website/04-course-lesson-plan.qmd
+
+preview:
+      port: 4014
+  
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    fontsize: 1.2em
+    linestretch: 1.65
+    toc: true
+    toc-location: right
+    toc-depth: 4
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    code-link: true
+    html-math-method: mathjax
+    linkcolor: rgb(214, 122, 127)
+    number-sections: true
+    number-depth: 3
+    grid:
+      sidebar-width: 300px
+      body-width: 960px
+      margin-width: 275px
+      gutter-width: 1.2em

@@ -1,0 +1,56 @@
+---
+title: "Incorporating Causal Inference in Statistics Courses"
+toc: true
+---
+
+::: {.callout-tip}
+## Details of CanCOTS 2025 including this working group
+
+- **Event:** [Canadian Conference on Teaching Statistics (CanCOTS) 2025](https://cancots.netlify.app/en/).
+- **Held by:** [Statistical Education Section](https://ssc.ca/en/about/sections-regions/statistical-education) of the [Statistical Society of Canada (SSC)](https://ssc.ca/en).
+- **Dates:** Wednesday and Thusday, June 11 and 12, 2025.
+- **Place:** HEC Montréal, Québec, Canada.
+- **Working group's topic:** Incorporating Causal Inference in Statistics Courses
+- **Team leader during group work sessions:** [G. Alexi Rodríguez-Arelis](https://alexrod.netlify.app/) (UBC).
+:::
+
+# About This Website {#sec-about-website}
+
+This Quarto website contains the **final deliverable** from one of the working groups of the first edition of the Canadian Conference on Teaching Statistics (CanCOTS), held in the summer of 2025 at HEC Montréal. CanCOTS is primarily a participant-driven working meeting that follows the format of a **curated unconference**. In this style of unconference, various working groups focus on priority areas of interest related to educational topics in statistics. All groups are expected to produce **concrete deliverables** addressing these priority areas, which may include exercise banks, curriculum guidelines, sample learning activities, and assessment items. Each working group has a leader who is responsible for overseeing collaborative efforts and shaping the final deliverable.
+
+![Image by [*manfredsteger*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/idea-visualization-line-art-3976295/).](img/idea.png){fig-align="center" width=50%}
+
+CanCOTS 2025 began with an initial roundtable discussion that brought all participants together. During this session, each group leader presented their educational topic along with a proposal for the final deliverable. Following these presentations, participants split into smaller working groups based on their interests. During the working group meetings, participants—including the group leaders—discussed and brainstormed ideas to develop the final deliverable. Additionally, a **comprehensive list of potential resources** was compiled to ensure that the deliverable contains fair and scholarly content.
+
+CanCOTS 2025 featured six different working groups, each focusing on a specific area of interest. One of these groups prioritized **incorporating causal inference into statistics courses**. As a result, the final deliverable for this working group was **a curriculum guideline for developing a fourth-year undergraduate course in causal inference**. At the start of the unconference, the specifics of the final deliverable were outlined as follows:
+
+> An overall course curriculum on causal inference (including lesson plan, learning objectives, and an overall structure of course content) with two fundamental pillars: experimentation and quasi-experimentation. A stretch goal of this working group would be incorporating data science-flavored topics such as A/B testing.
+
+Nevertheless, during the group meetings, the specifics of the final deliverable were revised to go beyond experimentation and quasi-experimentation to include observational studies. Additionally, the brainstorming sessions focused more on statistical perspectives rather than a data science approach. As a result, the final deliverable included in this repository has the following specifics:
+
+> Our final deliverable is an overall fourth-year undergraduate course curriculum on causal inference (including a **limited** lesson plan, learning objectives, and an overall structure of the course) based on a general causal inference roadmap of eight stages: (1) *research question*, (2) *causal model representing existing knowledge*, (3) *counterfactuals and causal parameters*, (4) *defining a statistical model*, (5) *model fitting (estimation)*, (6) *interpretation*, (7) *reporting*, and (8) *storytelling*.
+
+The above causal inference was inspired on the one used in the course *Introduction to Causal Inference* by @petersen2014.
+
+# Website Overview {#sec-website-overview}
+
+This overview illustrates the planning and design materials that shaped the development of this final deliverable. It starts with the initial conceptual framing to a structured roadmap and specific lesson plans:
+
+- **[Introductory Slides:](website/01-intro-slides.qmd)** A preliminary set of slides used at the beginning of CanCOTS, later refined into the final deliverable.
+- **[Course Outline:](website/02-course-outline.qmd)** A general overview detailing the course rationale, description, general learning goals, intended student audience, delivery format, and assessment criteria with grading breakdown.
+- **[Course Roadmap:](website/03-course-roadmap.qmd)** A visual and descriptive representation of the eight key stages that structure the course, each with a concise explanation of its role in the causal inference process.
+- **[Course Lesson Plan:](website/04-course-lesson-plan.qmd)** A targeted, structured guide specifying the instructional flow per week.
+
+# Acknowledgements
+
+We would like to express our gratitude to [Philippe Boileau](https://pboileau.ca), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/), and Nicole Babor for their valuable contributions during the workgroup sessions at CanCOTS 2025. Their insights in shaping the initial outline of this deliverable were crucial in establishing a solid foundation for its development. While this final deliverable reflects subsequent additions, their collaboration at the beginning was instrumental in setting the course of the project.
+
+# Use of Large Language Models 
+
+After the workgroup sessions at CanCOTS 2025, using a large language model (LLM) like ChatGPT [@chatgpt] proved to be moderately useful in brainstorming and organizing learning goals for each lecture, aligning with the plans established during the workgroup sessions. Furthermore, the LLM somehow helped identify scholarly references to consider as potential teaching and learning resources, beyond the textbooks mentioned in the [introductory slides](website/01-intro-slides.qmd). However, it was always necessary to carefully verify and analyze each suggested resource directly from the original source to ensure that none of the references were fabricated by ChatGPT, while also ensuring they were aligned with the course's content scope.
+
+# License {#sec-license}
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0"  width="150"  src="img/by-nc-sa.png" /></a>

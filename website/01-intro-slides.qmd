@@ -1,0 +1,23 @@
+---
+title: "Introductory Slides"
+title-block-style: none
+---
+
+![Image by [*Manfred Stege*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/pixel-cells-lecture-lecture-hall-3976296/).](img/presentation.png){width="550"}
+
+The following slide deck is from the initial roundtable discussion at CanCOTS for this working group. It introduced the primary team involved in the causal inference topic: [G. Alexi Rodríguez-Arelis](https://alexrod.netlify.app/), Assistant Professor of Teaching at UBC in the Department of Statistics, and [Philippe Boileau](https://pboileau.ca/), Assistant Professor of Biostatistics at McGill University. The discussion covered several key points:
+
+1. We presented an argument for the importance of incorporating causal inference into statistics courses, especially at the **undergraduate level**. We discussed the main goals of causal inference in statistics [@cummiskey2020] and emphasized the need to move beyond the conventional statement, "*correlation does not imply causation*." Moreover, we highlighted the importance of teaching the underlying processes that generate data.
+2. As instructors, we must convey to students that statistics encompasses both **problem-solving** and **decision-making** skills [@carver2016].
+3. When deriving causal conclusions from observational studies, we must maintain a level of skepticism.
+4. We introduced the **directed acyclic graph (DAG)** as a necessary tool for exploring causal relationships between different variables in a population or system of interest. We also stressed the importance of involving **subject-matter experts** in the DAG process.
+5. The initial proposed outputs from this working group included developing elements for an **undergraduate course** (at either the 3rd or 4th-year level) over 13 weeks, which will cover the overall course structure, lesson plans, and learning objectives. The course would initially focus on **experimentation** and **quasi-experimentation** while also addressing **observational studies** as an advanced topic.
+6. This initial proposed structure consisted of four blocks, beginning with an introduction to DAGs and progressing through experimentation, quasi-experimentation, and observational studies. This structure was intended to emphasize data science-related applications, such as A/B testing.
+7. We identified several challenges that might arise during the development of this deliverable, including the inclusion of the Bayesian paradigm, the necessity of regression analysis as a prerequisite, and balancing theoretical content with simulation-based approaches.
+8. Finally, we suggested three potential resources for course materials: “*Causal Inference: What If*” by @hernan2024, “*A First Course in Causal Inference*” by @ding2024, and “*Causal Inference: The Mixtape*” by @cunningham2021.
+
+::: {.callout-important}
+Since this was an initial presentation, the ideas in points (5), (6), and (7) were later modified to create the final **frequentist** deliverable, which is detailed in the [course outline](02-course-outline.qmd), [course roadmap](03-course-roadmap.qmd), and [course lesson plan](04-course-lesson-plan.qmd).
+:::
+
+<iframe src="slides/slides.html" width="100%" height="600px" style="border: none;"></iframe>

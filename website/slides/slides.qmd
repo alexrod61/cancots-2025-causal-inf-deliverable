@@ -1,0 +1,135 @@
+---
+title: "Incorporating Causal Inference in Statistics Courses"
+format: 
+  revealjs:
+    css: styles.css
+    slide-number: true
+    slide-level: 4
+    transition: none
+include-in-header:
+  text: |
+    <style>
+    #title-slide > .title {
+      color: chocolate;
+    }
+    </style>
+---
+
+# <span style="color: chocolate;">Agenda</span>
+
+1. The team
+2. Why is the topic important?
+3. Initial list of potential outputs
+4. Potential overall structure of course content
+5. Challenges ahead
+6. Reference material
+
+## <span style="color: chocolate;">1. The team</span>
+
+- [G. Alexi Rodríguez-Arelis](https://alexrod.netlify.app/) (UBC)
+- [Philippe Boileau](https://pboileau.ca/) (McGill University)
+
+![](img/team.png){fig-align="center" width=20%}
+
+## <span style="color: chocolate;">2. Why is the topic important?</span>
+
+> "The goal of causal inference is to estimate the effect in a population of intervening on one variable, the treatment, on another variable, the outcome." [@cummiskey2020]
+
+::: incremental
+- In <span style="color: purple;">introductory courses</span>, we must go beyond the usual warning <span style="color: purple;">"*correlation does not imply causation*"
+- What is the <span style="color: purple;">underlying process</span> that is generating the data?
+:::
+
+![](img/network.png){fig-align="center" width=20%}
+
+## <span style="color: chocolate;">2. Why is the topic important?</span>
+
+::: incremental
+- @carver2016 indicate that <span style="color: purple;">"*students should understand that statistics is a problem-solving and decision making process that is fundamental to scientific inquiry and essential for making sound decisions*"</span>
+- Most importantly, when drawing <span style="color: purple;">causal conclusions</span> on <span style="color: purple;">observational data</span>, students should be **skeptical** [@cummiskey2020]
+:::
+
+![](img/idea.png){fig-align="center" width=20%}
+
+### <span style="color: chocolate;">The Directed Acyclic Graph (DAG)</span>
+
+- DAGs are <span style="color: purple;">handy tools</span> to depict causality
+- Statisticians and <span style="color: purple;">subject-matter experts</span> can work **together** to build them! 
+
+![DAGs from @cummiskey2020.](img/dags-cummiskey-et-al-2020.png){width="400"} 
+
+
+## <span style="color: chocolate;">3. Initial list of potential outputs</span>
+
+::: incremental
+- Outputs are in function of developing an <span style="color: purple;">undergraduate</span> course (3rd or 4th-year level) spread across <span style="color: purple;">13 weeks</span>:
+  + **Overall structure of course content**
+  + **Lesson plan**
+  + **Learning objectives**
+- Two initial fundamental pillars: <span style="color: purple;">experimentation</span> and <span style="color: purple;">quasi-experimentation</span>
+- A third and more advanced pillar: <span style="color: purple;"> observational studies</span>
+:::
+
+## <span style="color: chocolate;">4. Potential overall structure of course content</span>
+
+:::: incremental
+- There are four blocks that start with an <span style="color: purple;">introduction to DAGs</span>
+- Then, we go from <span style="color: purple;">full control</span> to <span style="color: purple;">no control</span> on the <span style="color: purple;">study treatments</span>
+- A stronger emphasis on data science-related applications such as <span style="color: purple;">A/B testing</span>
+::::
+
+![](img/puzzle.png){fig-align="center" width=20%}
+
+### <span style="color: chocolate;">A mind map going clockwise!</span>
+
+<center>
+```{mermaid}
+mindmap
+  root(Course in Causal Inference)
+    {{BLOCK 3:<br/>Quasi experimentation}}
+    {{BLOCK 2:<br/>Experimentation}}
+    {{BLOCK 4:<br/>Observational studies}}
+    {{BLOCK 1:<br/>Introduction to DAGs}}
+```
+</center>
+
+![](img/mindmap.png){fig-align="center" width=20%}
+
+## <span style="color: chocolate;">5. Challenges ahead</span>
+
+::: incremental
+- Is there room within the course to include <span style="color: purple;">Bayesian thinking</span>?
+- How smooth would it be to introduce the <span style="color: purple;">fundamentals of causality</span> via <span style="color: purple;">DAGs and Bayesian networks</span>? [@lu2022]
+:::
+
+![](img/challenge.png){fig-align="center" width=30%}
+
+
+## <span style="color: chocolate;">5. Challenges ahead</span>
+
+::: incremental
+- What are the pros and cons of having <span style="color: purple;">regression analysis</span> as a <span style="color: purple;">prerequisite</span>?
+- How <span style="color: purple;">theoretical</span> should we conceived the course? @lubbke2020 provide a fair <span style="color: purple;">simulation-based</span> starting via <span style="color: purple;">generative modelling</span> and <span style="color: purple;">regression analysis</span>
+:::
+
+![](img/books.png){fig-align="center" width=30%}
+
+## <span style="color: chocolate;">5. Challenges ahead</span> {.smaller}
+
+::: incremental
+- Using different textbooks to develop course material such as:
+  + "**Causal Inference: What If**" by @hernan2024, a review on causal inference <span style="color: purple;">with (i.e., parametric)</span> or <span style="color: purple;">without (i.e., non-parametric)</span> models
+  + "**A First Course in Causal Inference**" by @ding2024, a review on <span style="color: purple;">randomized</span> and <span style="color: purple;">observational</span> studies
+  + "**Causal Inference: The Mixtape**" by @cunningham2021, which provides insights on <span style="color: purple;">regression discontinuity</span> for quasi-experimentation
+:::
+
+![](img/books-2.png){fig-align="center" width=30%}
+
+# <span style="color: chocolate;">Questions?</span>
+
+![](img/question.png){fig-align="center" width=50%}
+
+## <span style="color: chocolate;">6. Reference material</span>
+
+::: {#refs}
+:::

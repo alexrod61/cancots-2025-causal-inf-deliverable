@@ -1,0 +1,12 @@
+---
+title: "Overall References"
+bibliography: references.bib
+reference-location: document
+nocite: |
+  @*
+---
+
+:::::: {.column-page-inset-right}
+::: {#refs}
+:::
+::::::
