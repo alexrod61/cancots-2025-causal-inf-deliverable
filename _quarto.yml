@@ -21,12 +21,12 @@ website:
     right:
       - href: references.qmd
       - icon: github
-        href: https://github.com/alexrod61/cancots-2025-causal-inf
+        href: https://github.com/alexrod61/cancots-2025-causal-inf-deliverable
         
     foreground: "#FBBA72"
     background: "#BC5D2E"
     
-  repo-url: https://github.com/alexrod61/cancots-2025-causal-inf
+  repo-url: https://github.com/alexrod61/cancots-2025-causal-inf-deliverable
 
   sidebar:
     - style: docked
