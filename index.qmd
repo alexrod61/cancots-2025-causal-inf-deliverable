@@ -8,10 +8,11 @@ toc: true
 
 - **Event:** [Canadian Conference on Teaching Statistics (CanCOTS) 2025](https://cancots.netlify.app/en/).
 - **Held by:** [Statistical Education Section](https://ssc.ca/en/about/sections-regions/statistical-education) of the [Statistical Society of Canada (SSC)](https://ssc.ca/en).
-- **Dates:** Wednesday and Thusday, June 11 and 12, 2025.
+- **Dates:** Wednesday and Thursday, June 11 and 12, 2025.
 - **Place:** HEC Montréal, Québec, Canada.
-- **Working group's topic:** Incorporating Causal Inference in Statistics Courses
-- **Team leader during group work sessions:** [G. Alexi Rodríguez-Arelis](https://alexrod.netlify.app/) (UBC).
+- **Working group topic:** Incorporating Causal Inference in Statistics Courses.
+- **Working group lead during the CanCOTS sessions and final deliverable curator:** [G. Alexi Rodríguez-Arelis](https://alexrod.netlify.app/) (UBC).
+**Working group contributors during the CanCOTS sessions:** [Philippe Boileau](https://pboileau.ca/) (McGill University), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/about/) (UBC), and Nicole Babor.
 :::
 
 # About This Website {#sec-about-website}
@@ -43,7 +44,7 @@ This overview illustrates the planning and design materials that shaped the deve
 
 # Acknowledgements
 
-We would like to express our gratitude to [Philippe Boileau](https://pboileau.ca), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/), and Nicole Babor for their valuable contributions during the workgroup sessions at CanCOTS 2025. Their insights in shaping the initial outline of this deliverable were crucial in establishing a solid foundation for its development. While this final deliverable reflects subsequent additions, their collaboration at the beginning was instrumental in setting the course of the project.
+This deliverable grew out of the CanCOTS 2025 working group on incorporating causal inference in statistics courses. Special thanks to [Philippe Boileau](https://pboileau.ca), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/), and Nicole Babor for their valuable contributions during the working-group sessions, which helped shape the initial direction and foundation of the project.
 
 # Use of Large Language Models 
 
@@ -54,3 +55,7 @@ After the workgroup sessions at CanCOTS 2025, using a large language model (LLM)
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0"  width="150"  src="img/by-nc-sa.png" /></a>
+
+## Contact {#sec-contact}
+
+For questions about this deliverable, please contact G. Alexi Rodríguez-Arelis via email: [alexrod@stat.ubc.ca](mailto:alexrod@stat.ubc.ca)
