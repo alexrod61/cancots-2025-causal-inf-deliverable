@@ -12,7 +12,7 @@ toc: true
 - **Place:** HEC Montréal, Québec, Canada.
 - **Working group topic:** Incorporating Causal Inference in Statistics Courses.
 - **Working group lead during the CanCOTS sessions and final deliverable curator:** [G. Alexi Rodríguez-Arelis](https://alexrod.netlify.app/) (UBC).
-**Working group contributors during the CanCOTS sessions:** [Philippe Boileau](https://pboileau.ca/) (McGill University), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/about/) (UBC), and Nicole Babor.
+- **Working group contributors during the CanCOTS sessions:** [Philippe Boileau](https://pboileau.ca/) (McGill University), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/about/) (UBC), and Nicole Babor.
 :::
 
 # About This Website {#sec-about-website}
