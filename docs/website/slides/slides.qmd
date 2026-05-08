@@ -109,7 +109,7 @@ mindmap
 
 ::: incremental
 - What are the pros and cons of having <span style="color: purple;">regression analysis</span> as a <span style="color: purple;">prerequisite</span>?
-- How <span style="color: purple;">theoretical</span> should we conceived the course? @lubbke2020 provide a fair <span style="color: purple;">simulation-based</span> starting via <span style="color: purple;">generative modelling</span> and <span style="color: purple;">regression analysis</span>
+- How <span style="color: purple;">theoretical</span> should we conceive the course? @lubbke2020 provide a fair <span style="color: purple;">simulation-based</span> starting via <span style="color: purple;">generative modelling</span> and <span style="color: purple;">regression analysis</span>
 :::
 
 ![](img/books.png){fig-align="center" width=30%}
