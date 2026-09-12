@@ -49,7 +49,9 @@ A typical navigation path for this repository is:
 
 ## Acknowledgements
 
-This deliverable grew out of the CanCOTS 2025 working group on incorporating causal inference in statistics courses. Special thanks to Philippe Boileau, Irene Vrbik, and Nicole Babor for their valuable contributions during the working-group sessions, which helped shape the initial direction and foundation of the project.
+This deliverable grew out of the CanCOTS 2025 working group on incorporating causal inference in statistics courses. Special thanks to [Philippe Boileau](https://pboileau.ca), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/), and Nicole Babor for their valuable contributions during the working-group sessions, which helped shape the initial direction and foundation of the project.
+
+We also thank the peer reviewers who provided constructive feedback on the scope, sequencing, and presentation of this curriculum guideline. Their comments informed refinements to the distinction between core and advanced material, the connections among causal frameworks, the role of propensity-score methods, and the stated scope of experimental, quasi-experimental, and observational designs.
 
 ## Use of Large Language Models 
 
