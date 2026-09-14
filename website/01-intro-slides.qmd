@@ -17,7 +17,7 @@ The following slide deck is from the initial roundtable discussion at CanCOTS fo
 8. Finally, we suggested three potential resources for course materials: “*Causal Inference: What If*” by @hernan2024, “*A First Course in Causal Inference*” by @ding2024, and “*Causal Inference: The Mixtape*” by @cunningham2021.
 
 ::: {.callout-important}
-Since this was an initial presentation, the ideas in points (5), (6), and (7) were later modified to create the final **frequentist** deliverable, which is detailed in the [course outline](02-course-outline.qmd), [course roadmap](03-course-roadmap.qmd), and [course lesson plan](04-course-lesson-plan.qmd).
+Since this was an initial presentation, the ideas in points (5), (6), and (7) were later modified to create the final curriculum deliverable, which is detailed in the [course outline](02-course-outline.qmd), [course roadmap](03-course-roadmap.qmd), and [course lesson plan](04-course-lesson-plan.qmd). The slides are retained here as a record of the working group's starting point; the later pages should be treated as the current curricular recommendations. In particular, they provide a clearer distinction between core and optional/advanced content, make the relationship between graphical and potential-outcome frameworks explicit, and clarify how experimental, quasi-experimental, and observational designs fit within the proposed course.
 :::
 
 <iframe src="slides/slides.html" width="100%" height="600px" style="border: none;"></iframe>

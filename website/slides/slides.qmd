@@ -2,7 +2,6 @@
 title: "Incorporating Causal Inference in Statistics Courses"
 format: 
   revealjs:
-    css: styles.css
     slide-number: true
     slide-level: 4
     transition: none

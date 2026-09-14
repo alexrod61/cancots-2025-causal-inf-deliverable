@@ -118,7 +118,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -205,8 +204,16 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-course-roadmap" id="toc-sec-course-roadmap" class="nav-link active" data-scroll-target="#sec-course-roadmap"><span class="header-section-number">1</span> Causal Inference Roadmap</a></li>
+  <li><a href="#sec-causal-frameworks" id="toc-sec-causal-frameworks" class="nav-link" data-scroll-target="#sec-causal-frameworks"><span class="header-section-number">2</span> How the Causal Frameworks Fit Together</a></li>
+  <li><a href="#sec-reconstructing-roadmap" id="toc-sec-reconstructing-roadmap" class="nav-link" data-scroll-target="#sec-reconstructing-roadmap"><span class="header-section-number">3</span> Reconstructing the Roadmap from Published Research</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -230,7 +237,9 @@ window.Quarto = {
 </header>
 
 
-<p>A core component of this course is what we refer to as the <strong>causal inference roadmap</strong>. This idea emerged during the group meetings and is based on the work of <span class="citation" data-cites="petersen2014">Petersen and Balzer (<a href="#ref-petersen2014" role="doc-biblioref">2014</a>)</span>. Their course, titled <em>Introduction to Causal Inference</em>, originally included seven steps: (1) <em>causal model</em>, (2) <em>counterfactuals and causal effects</em>, (3) <em>observed data</em>, (4) <em>identifiability</em>, (5) <em>estimation problem</em>, (6) <em>estimation</em>, and (7) <em>interpretation.</em> However, we have adapted this structure into eight stages.</p>
+<section id="sec-course-roadmap" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Causal Inference Roadmap</h1>
+<p>A core component of this course is what we refer to as the <strong>causal inference roadmap</strong>. This idea emerged during the group meetings and is based on the work of <span class="citation" data-cites="petersen2014">Petersen and Balzer (<a href="#ref-petersen2014" role="doc-biblioref">2014</a>)</span>. Their <em>Introduction to Causal Inference</em> materials organize causal analysis around seven linked steps beginning with a <strong>clear research question</strong>, followed by specification of the causal model and effect of interest, observed data, identifiability, the statistical estimation problem, estimation, and interpretation. We adapt that workflow into eight stages by separating some conceptual tasks and by making reporting and storytelling explicit parts of the educational sequence.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/computer.png" class="img-fluid figure-img" width="400"></p>
@@ -242,18 +251,42 @@ window.Quarto = {
 <ol type="1">
 <li><strong>Research Question.</strong> Every causal analysis begins with a well-defined research question rooted in domain expertise, ensuring it is scientifically meaningful. This stage often requires iterative refinement with subject-matter collaborators to clarify the exposures, outcomes, confounders, and potential mediators involved.</li>
 <li><strong>Causal Model Representing Existing Knowledge.</strong> The next step is to encode existing knowledge using a directed acyclic graph (DAG), ideally informed by literature and expert consultation. The DAG clarifies hypothesized dependencies and guides the identification of an appropriate study design—experimental, quasi-experimental, or observational—based on the underlying data-generating process.</li>
-<li><strong>Counterfactuals and Causal Parameters.</strong> Causal inference relies on counterfactual reasoning, typically represented as potential outcomes, such as binary <span class="math inline">\(Y(0)\)</span> versus <span class="math inline">\(Y(1)\)</span>. Researchers must determine which function of these counterfactuals, such as the average treatment effect (ATE) or the average treatment effect on the treated (ATT), best addresses the original research question, often formalized through structural causal models.</li>
-<li><strong>Defining a Statistical Model.</strong> The causal parameter is then mapped to a statistical parameter, such as a regression coefficient or other estimand. Identifiability assumptions—including no unmeasured confounding and positivity—are essential to ensure that the statistical parameter accurately reflects the causal parameter.</li>
-<li><strong>Model Fitting (Estimation).</strong> Researchers estimate causal effects using methods suited to the study design and data, such as inverse probability weighting or G-estimation.</li>
+<li><strong>Counterfactuals and Causal Parameters.</strong> Causal inference relies on counterfactual reasoning, which can be represented using potential-outcome notation such as <span class="math inline">\(Y(0)\)</span> and <span class="math inline">\(Y(1)\)</span>. Researchers must determine which function of these counterfactuals, such as the average treatment effect (ATE) or the average treatment effect on the treated (ATT), best addresses the original research question. When an SCM is used, these counterfactual quantities can also be linked to interventions defined by the structural model.</li>
+<li><strong>Defining the Observed-Data and Statistical Problem.</strong> The next task is to determine whether the causal estimand is identifiable from the observed-data distribution under stated assumptions such as consistency, exchangeability/no unmeasured confounding, and positivity. When identification holds, the causal estimand is expressed as an observed-data functional; statistical models may then be introduced as tools for estimating that quantity rather than as substitutes for the causal estimand itself.</li>
+<li><strong>Model Fitting (Estimation).</strong> Researchers choose an estimator that matches the identified estimand, study design, and available data. In the core course pathway, propensity-score estimation and inverse probability weighting provide a first bridge from familiar logistic regression to causal estimation. Propensity-score matching or subclassification can be introduced as extensions, while methods such as G-estimation are treated as optional/advanced material.</li>
 <li><strong>Interpretation.</strong> Estimated effects must be interpreted in light of the causal assumptions made. Sensitivity analyses and model diagnostics help evaluate the plausibility of these assumptions and assess the robustness of the conclusions drawn.</li>
 <li><strong>Reporting.</strong> Findings should be reported transparently, adhering to scientific guidelines appropriate to the study design. Reporting includes not only point estimates of effects but also interval estimates, assumptions, limitations, and the rationale behind the analytical choices made.</li>
 <li><strong>Storytelling.</strong> Finally, the results of causal inference must be presented through a coherent narrative that effectively communicates the significance of the findings to both technical and non-technical audiences. Storytelling emphasizes the importance of the research, the implications of the estimated effects, and how they contribute to scientific or policy discussions.</li>
 </ol>
+</section>
+<section id="sec-causal-frameworks" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> How the Causal Frameworks Fit Together</h1>
+<ul>
+<li><strong>DAGs and structural causal models (SCMs)</strong> encode substantive assumptions about causal structure and the data-generating system.</li>
+<li><strong>Potential outcomes</strong> provide counterfactual notation for defining causal quantities under interventions. Quantities such as the ATE and ATT are <strong>causal estimands</strong> (they are not a third competing framework).</li>
+<li><strong>Identification</strong> is the bridge between the causal estimand and observed data.</li>
+<li><strong>Statistical models and estimators</strong> are then used to estimate that identified observed-data quantity. A regression coefficient is not automatically a causal effect; its causal interpretation depends on the study design, identification assumptions, estimand, and model specification.</li>
+</ul>
+<p>Therefore, the roadmap functions as a translation device across traditions: graphical assumptions, potential-outcome estimands, identification, and statistical estimation are connected sequentially rather than collapsed into a single framework <span class="citation" data-cites="morgan2007 hernan2024 ding2024">(<a href="#ref-morgan2007" role="doc-biblioref">Morgan and Winship 2007</a>; <a href="#ref-hernan2024" role="doc-biblioref">Hernán and Robins 2020</a>; <a href="#ref-ding2024" role="doc-biblioref">Ding 2024</a>)</span>.</p>
+</section>
+<section id="sec-reconstructing-roadmap" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Reconstructing the Roadmap from Published Research</h1>
+<p>Published papers rarely label all eight stages in exactly this terminology; some stages are explicit and others must be inferred from the design, methods, and discussion. Thus, the <a href="../website/04-course-lesson-plan.html">lesson plan</a> uses published studies early in the course and again in the appraisal project so that students practice reconstructing the research question, causal estimand, structural assumptions, identification strategy, estimator, interpretation, and reporting choices from authentic research. This keeps the roadmap connected to the workflow researchers use in practice rather than treating it as a purely schematic sequence.</p>
 
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ding2024" class="csl-entry" role="listitem">
+Ding, P. 2024. <em>A First Course in Causal Inference</em>. Chapman; Hall/CRC. <a href="https://doi.org/10.1201/9781003484080">https://doi.org/10.1201/9781003484080</a>.
+</div>
+<div id="ref-hernan2024" class="csl-entry" role="listitem">
+Hernán, Miguel A., and James M. Robins. 2020. <em>Causal Inference: What If</em>. Boca Raton: Chapman &amp; Hall/CRC. <a href="https://miguelhernan.org/whatifbook">https://miguelhernan.org/whatifbook</a>.
+</div>
+<div id="ref-morgan2007" class="csl-entry" role="listitem">
+Morgan, Stephen L., and Christopher Winship. 2007. <em>Counterfactuals and Causal Inference: Methods and Principles for Social Research</em>. 1st ed. New York: Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511804564">https://doi.org/10.1017/CBO9780511804564</a>.
+</div>
 <div id="ref-petersen2014" class="csl-entry" role="listitem">
 Petersen, Maya, and Laura Balzer. 2014. <span>“Introduction to Causal Inference.”</span> <a href="https://ctml.berkeley.edu/introduction-causal-inference" class="uri">https://ctml.berkeley.edu/introduction-causal-inference</a>.
 </div>

@@ -4,7 +4,7 @@ title: "Course Lesson Plan"
 
 ![Image by [*manfredsteger*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/pixel-cells-pixel-to-learn-3674104/).](img/sessions.png){fig-align="center" width=70%}
 
-This section of the final deliverable presents a concise thirteen-week lesson plan for a fourth-year undergraduate course in causal inference. The lesson plan is **limited** in scope due to the following reasons:
+This section of the final deliverable presents a concise thirteen-week lesson plan for a fourth-year undergraduate course in causal inference. It is intentionally **modular rather than prescriptive**: the roadmap is the common core, whereas the number of specialized estimation methods can be adjusted to the students' preparation and the local curriculum. The lesson plan remains limited in the following ways:
 
 - The lesson plan encompasses **comprehensive learning goals** for each lecture throughout the entire term, with **specific action verbs** aligned with the revised **Bloom's taxonomy** [@bloom1956] as defined by @anderson2001. This revised taxonomy organizes the six levels of the cognitive domain (related to learning) as follows:
 
@@ -32,13 +32,27 @@ The final four weeks of the course will not be used to introduce students to add
 Therefore, for the above weeks, there will not be mapped scholarly materials.
 :::
 
+# How to Read the Content and Resource Mappings
+    
+The references linked throughout this page form an **instructor-facing resource bank**, not a cumulative list of readings that students are expected to complete (see @tbl-how-to-read).
+    
+| Label | Meaning |
+|:---:|:---:|
+| **Core / required content** | Concepts and activities intended for the standard pathway. This label applies to the **content**, not to every reference listed beside it. Instructors should normally select **one principal source or a short excerpt** for student-facing preparation rather than assign every source mapped to a learning goal. |
+| **Recommended resource** | Complementary readings, alternative explanations, published examples, or instructor-preparation materials that can deepen a core topic without being required for all students. **Unless an individual reference is explicitly marked Core, this is the default status of references listed in a core week.** |
+| **Optional/advanced** | Specialized technical content and its associated resources that can be taught selectively when student preparation and course time permit. |
+
+: Interpretation of content and resource labels used throughout the course materials. {#tbl-how-to-read .striped .hover}
+
+At the module level, **weeks 1–5 and 8–9 are the core instructional pathway**. Weeks 6 and 7 (G-estimation and causal mediation analysis) are optional/advanced modules.
+
 # Lecture Breakdown
 
 Below is a weekly breakdown of the learning goals per lecture. Additionally, we provide a brief summary of each learning week and outline the expectations at the end of the respective two lectures.
 
 ## Know your Research Question! (stage 1 in the roadmap)
 
-During **week 1**, the instructor is expected to introduce students to a foundational mindset in causal inference, which will be linked to the [**course's inferential roadmap**](03-course-roadmap.qmd#sec-course-roadmap). The primary goal for this week is to help students develop the skill to distinguish between statistical inquiries involving association or causation in scientific research. Additionally, students will be introduced to the causal roadmap, which consists of eight stages: (1) *research question*, (2) *causal model representing knowledge*, (3) *counterfactuals and causal parameters*, (4) *defining a statistical model*, (5) *model fitting (estimation)*, (6) *interpretation*, (7) *reporting*, and (8) *storytelling*. This roadmap will serve as the main pillar of the course's learning strategy.
+During **week 1**, the instructor is expected to introduce students to a foundational mindset in causal inference, which will be linked to the [**course's inferential roadmap**](03-course-roadmap.qmd#sec-course-roadmap). The primary goal for this week is to help students develop the skill to distinguish between statistical inquiries involving association or causation in scientific research. Additionally, students will be introduced to the causal roadmap, which consists of eight stages: (1) *research question*, (2) *causal model representing existing knowledge*, (3) *counterfactuals and causal parameters*, (4) *defining the observed-data and statistical problem*, (5) *model fitting (estimation)*, (6) *interpretation*, (7) *reporting*, and (8) *storytelling*. This roadmap will serve as the main pillar of the course's learning strategy.
 
 ![Image by [*Manfred Stege*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/pixel-cells-emotion-bored-6230197/).](img/question.png){width=25%}
 
@@ -60,8 +74,8 @@ By the end of this lecture, students should be able to:
 
 1. **Describe** what causal inference is along with its usefulness in scientific research (**remember** level).
 2. **Explain** how causation and association differ via practical examples (**understand** level).
-3. **Classify** different types of research questions in terms causation and association (**understand** level).
-4. **Identify** the components of a causal questions, e.g., treatment, outcome, and population.
+3. **Classify** different types of research questions in terms of causation and association (**understand** level).
+4. **Identify** the components of a causal question, e.g., treatment, outcome, and population (**remember** level).
 
 The above goals can be mapped to the following materials:
 
@@ -82,7 +96,7 @@ By the end of this lecture, students should be able to:
 The above goals can be mapped to the following materials:
 
 1.  [Roadmap Overview & Roadmap Step 0 - Research Question (Lecture 1c - The Causal Roadmap)](https://drive.google.com/file/d/1FIGchk88ulZNnTQJfGAa5bXdS0TH4fgo/view) from @petersen2014. Recall that the roadmap for this course is inspired by this reference. Hence, this material can be used as a baseline to introduce our roadmap.
-2. For this learning goal, the instructor could provide a summary of the following four published papers (two of which pose causal questions, whereas the other two pose association questions):
+2. **Core published-paper activity.** The instructor could provide short excerpts or a structured summary of the following four published papers (two of which pose causal questions, whereas the other two pose association questions). Students should not be expected to read all four papers in full. In addition to classifying each research question, students can begin reconstructing the roadmap by identifying which elements are stated explicitly and which remain implicit in the article:
   - **Causal questions:**
     + "*Does Compulsory School Attendance Affect Schooling and Earnings?*" from @angrist1991.
     + "*Using Geographic Variation in College Proximity to Estimate the Return to Schooling*" from @card1995.
@@ -124,20 +138,20 @@ The above goals can be mapped to the following materials:
 By the end of this lecture, students should be able to:
 
 1. Create DAGs to represent hypothetical causal mechanisms based on subject-matter expertise (**create level**).
-2. Identify common structures in DAGs such as confounding, mediating, backdoor criterion, and colliding paths (**analyze** level).
+2. Identify and distinguish **confounders, mediators, and colliders**, and use open/closed paths and the back-door criterion to explain how conditioning decisions can remove or introduce bias (**analyze** level).
 3. Evaluate the adequacy of DAGs constructed by peers or drawn from published studies, focusing on clarity and underlying assumptions (**evaluate** level).
 4. Differentiate between experimental, quasi-experimental, and observational study designs using DAGs to illustrate assumptions and limitations (**understand** level).
 
 The above goals can be mapped to the following materials:
 
-1. To address this goal, the students could have hands-on practice with the cases depicted  by @morgan2007 provide a fair list of referenced examples in **Chapter 1 (Introduction)**, specifically in **sections 1.3.1 (Broad Examples from Sociology, Economics, and Political Science)** and **1.3.2 (Narrow and Specific Examples)**.
+1. To address this goal, students could gain hands-on practice by constructing DAGs for cases drawn from **Chapter 1 (Introduction)** of @morgan2007, particularly **sections 1.3.1 (Broad Examples from Sociology, Economics, and Political Science)** and **1.3.2 (Narrow and Specific Examples)**, which provide examples across several applied settings.
 2. [Chapter 8 (Causal Paths and Closing Back Doors)](https://theeffectbook.net/ch-CausalPaths.html) from @huntington2021, [Chapter 7 (Confounding)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) from @hernan2024, and **Chapter 1 (Causal Graphs, Identification, and Models of Causal Exposure)** from @morgan2007.
 3. To address this goal, students are expected to assess the DAGs delivered in goal (1) while applying the concepts addressed in goal (2).
 4. The developed material from [**lecture 3**](#sec-lecture-3), to address the respective **goal (3)**, can be used to fulfil this goal.
 
 ## Introduction to Counterfactuals (stage 3 in the roadmap)
 
-**Week 3** focuses on both the theoretical and practical aspects of **counterfactuals**. As outlined in the [course roadmap](03-course-roadmap.qmd#sec-course-roadmap), counterfactuals play a crucial role in the entire causal inference process. They are an essential component of the **structural causal model (SCM)**, which is a mathematical framework for illustrating the causal relationships between variables within a given system. This SCM framework will also provide students with computational tools to connect DAGs, discussed in week 2, with counterfactual reasoning.
+**Week 3** focuses on both the theoretical and practical aspects of **counterfactuals**. As outlined in the [course roadmap](03-course-roadmap.qmd#sec-course-roadmap), the course now makes an explicit bridge between two causal languages that students may encounter in different disciplines. **DAGs/structural causal models (SCMs)** are used to encode structural causal assumptions, whereas **potential-outcome notation** is used to define counterfactual quantities and treatment-effect estimands. The two perspectives can inform one another, but they should not be introduced to beginners as if they were identical frameworks. This week therefore emphasizes how the graphical/structural assumptions from week 2 connect to, rather than replace, potential-outcome reasoning.
 
 The workflow for this week begins with defining the DAG in the context of a causal inference inquiry within a specific system. Students will then derive a SCM composed of equations that represent the data-generating process for each variable. These equations explicitly illustrate the mechanisms that produce counterfactual outcomes, such as:
 
@@ -160,8 +174,8 @@ By the end of this lecture, students should be able to:
 
 The above goals can be mapped to the following materials:
 
-1. [Chapters 3 (Observational studies) and 5 (Interaction)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) from @hernan2024. These chapters offer a comprehensive theoretical content. For in-class material, [Roadmap Step 1 - Causal Model (Lecture 2a - Intro to Structural Causal Models)](https://drive.google.com/file/d/117tfMFkQ6OS30cA13cJVus21kfywSh1U/view), from @petersen2014, is a fair starting point.
-2. **Chapter 2 (The Counterfactual Model)** from @morgan2007; this chapter offers a comprehensive theoretical content. For in-class material, [Roadmap Step 1 - Causal Model (Lecture 2b - How SCMs encode causal assumptionss)](https://drive.google.com/file/d/117tfMFkQ6OS30cA13cJVus21kfywSh1U/view), from @petersen2014, is a fair starting point.
+1. [Chapters 3 (Observational studies) and 5 (Interaction)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) from @hernan2024. These chapters offer comprehensive theoretical coverage. For in-class material, [Roadmap Step 1 - Causal Model (Lecture 2a - Intro to Structural Causal Models)](https://drive.google.com/file/d/117tfMFkQ6OS30cA13cJVus21kfywSh1U/view), from @petersen2014, is a fair starting point.
+2. **Chapter 2 (The Counterfactual Model)** from @morgan2007; this chapter offers a comprehensive theoretical content. For in-class material, [Roadmap Step 1 - Causal Model (Lecture 2b - How SCMs encode causal assumptions)](https://drive.google.com/file/d/117tfMFkQ6OS30cA13cJVus21kfywSh1U/view), from @petersen2014, is a fair starting point.
 3. [Chapter 4  (Potential Outcomes Causal Model)](https://mixtape.scunning.com/04-potential_outcomes), from @cunningham2021, provides simple coding examples via `R` that the instructor could use in their in-class material.
 4.  For in-class material, [Roadmap Step 1 - Causal Model (Lecture 2c - SCMs & Directed Acyclic Graphs)](https://drive.google.com/file/d/117tfMFkQ6OS30cA13cJVus21kfywSh1U/view), from @petersen2014, is a fair starting point. Moreover, students can continue with the DAGs constructed to address **goal (4)** from [**lecture 4**](#sec-lecture-4) to deliver the corresponding SCMs for the corresponding experimental, quasi-experimental, and observational designs.
 
@@ -170,13 +184,13 @@ The above goals can be mapped to the following materials:
 By the end of this lecture, students should be able to:
 
 1. Interpret counterfactual quantities such as $Y(a)$, the potential outcome under treatment level $a$ (**understand** level).
-2. Implement causal parameters (e.g.; ATE or average treatment effect on the treated, ATT) from simulated SCMs using counterfactual logic (**apply** level).
+2. Implement causal parameters (e.g., ATE or average treatment effect on the treated, ATT) from simulated SCMs using counterfactual logic (**apply** level).
 3. Identify causal parameters with specific scientific research questions (**apply** level).
 4. Design small simulation exercises to test assumptions underlying counterfactual inference (**create** level).
 
 The above goals can be mapped to the following materials:
 
-1. [Chapters 3 (Observational studies) and 5 (Interaction)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) from @hernan2024. These chapters offer a comprehensive theoretical content.
+1. [Chapters 3 (Observational studies) and 5 (Interaction)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) from @hernan2024. These chapters offer comprehensive theoretical coverage.
 2. There are two potential sources of material we can use to fulfill this goal:
 
   - The first one is less technical and it is [Chapter 10 - Treatment Effects](https://theeffectbook.net/ch-TreatmentEffects.html) from @huntington2021. If the instructor chooses to use more technical content during class time, this might be an ideal pre-lecture material.
@@ -185,17 +199,17 @@ The above goals can be mapped to the following materials:
 3. Students are expected to fulfill this learning goal by using the SCMs delivered in [**lecture 5**](#sec-lecture-5) for its corresponding **goal (4)**.
 4. Students are expected to continue working with the SCMs from the above goal (3). Now, it is time to code the SCMs delivered from the corresponding experimental, quasi-experimental, and observational designs.
 
-## Defining the Statistical Model: Observed Data and Identifiability Conditions (stage 4 in the roadmap)
+## Defining the Observed-Data and Statistical Problem: Identifiability Conditions (stage 4 in the roadmap)
 
-During **week 4**, the instructor is expected to connect the causal model represented by DAGs and SCMs with the corresponding statistical model, with a focus on the identifiability of causal parameters. We start by recalling DAGs as formal representations of causal assumptions. From these DAGs, we construct SCMs, specifying structural equations and endogenous variables that determine counterfactual outcomes. Once the SCM is defined, we analyze how these counterfactuals relate to observed data, emphasizing that only a subset of potential outcomes can be observed.
+During **week 4**, the instructor is expected to connect the causal model represented by DAGs and SCMs with the observed-data and statistical problem, with a focus on the identifiability of causal parameters. We start by recalling DAGs as formal representations of causal assumptions. From these DAGs, we construct SCMs, specifying structural equations and endogenous variables that determine counterfactual outcomes. Once the SCM is defined, we analyze how these counterfactuals relate to observed data, emphasizing that only a subset of potential outcomes can be observed.
 
-A key focus this week is on the spectrum of assumptions in statistical modelling. **Parametric** models specify a complete probability distribution (for example, ordinary least-squares regression with normally distributed errors), while **semi-parametric** models relax some of these specifications (like Cox models). **Non-parametric** models impose minimal assumptions on the functional form, relying solely on the assumptions encoded in the DAG.
+A key focus this week is on the spectrum of assumptions in statistical modelling. **Parametric** models specify a complete probability distribution (for example, ordinary least-squares regression with normally distributed errors), while **semi-parametric** models relax some of these specifications (like Cox models). **Non-parametric** statistical models avoid imposing a fixed finite-dimensional functional form, although causal identification still requires substantive assumptions (such as consistency, exchangeability, and positivity) that are conceptually distinct from the statistical model itself.
 
 ![Image by [*Manfred Stege*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/laptop-games-jigsaw-puzzle-puzzle-7426707/).](img/puzzle.png){width="300"}
 
-In the second half of the week, we define identifiability as the condition under which a causal parameter (such as the ATE) can be expressed as a function of the observed data distribution. Students will learn to utilize **d-separation** and the **back-door criterion** as tools to determine when identifiability holds, given the assumptions of no unmeasured confounding and positivity.
+In the second half of the week, we define identifiability as the condition under which a causal parameter (such as the ATE) can be expressed as a function of the observed-data distribution. Students will learn to utilize **d-separation** and the **back-door criterion** as tools for reasoning about identification, alongside assumptions such as consistency, exchangeability/no unmeasured confounding, and positivity.
 
-We will evaluate how each type of statistical model (parametric, semi-parametric, and non-parametric) impacts identifiability. The week will conclude with a comparative discussion across disciplines—such as epidemiology, economics, and statistics—of the various terminologies and conceptual frameworks used to express identifiability conditions. For example, students will explore the relationship between the **stable unit treatment value assumption (SUTVA)**, **ignorability** in econometrics, and **conditional exchangeability** in epidemiology. This reflection will help students understand how each domain approaches the identifiability problem through its unique perspective.
+We will distinguish the assumptions required for **causal identification** from the assumptions introduced through **statistical modelling and estimation**. In particular, students will compare parametric, semi-parametric, and non-parametric statistical models and consider how these modelling choices affect estimation and inference once a causal estimand has been identified. The week will conclude with a comparative discussion across disciplines (such as epidemiology, economics, and statistics) of the various terminologies and conceptual frameworks used to express identifiability conditions. For example, students will explore the relationship between the **stable unit treatment value assumption (SUTVA)**, **ignorability** in econometrics, and **conditional exchangeability** in epidemiology. This reflection will help students understand how each domain approaches the identifiability problem through its unique perspective.
 
 ### Lecture 7 {#sec-lecture-7}
 
@@ -220,8 +234,8 @@ The above goals can be mapped to the following materials:
 By the end of this lecture, students should be able to:
 
 1. Determine whether a causal parameter is identifiable using d-separation and the back-door criterion (**evaluate** level).
-2. Assess whether key identifiability conditions—no unmeasured confounding and positivity—hold in study designs (**evaluate** level).
-3. Compare how different statistical modelling assumptions (parametric, semi, non-parametric) affect identifiability (**understand** level).
+2. Assess the plausibility of key identifiability conditions—including consistency, exchangeability/no unmeasured confounding, and positivity—in different study designs (**evaluate** level).
+3. Compare parametric, semi-parametric, and non-parametric statistical models, explaining how their assumptions affect estimation and inference while distinguishing them from the causal assumptions required for identification (**understand** level).
 4. Build a visual map that translates vocabulary across disciplines: SUTVA, ignorability, independence, and exchangeability (**create** level).
 
 ::: {.callout-tip}
@@ -237,9 +251,11 @@ The above goals can be mapped to the following materials:
 3. [Chapter 11 (Why Model?)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) from @hernan2024
 4. [Section 4.1.5](https://mixtape.scunning.com/04-potential_outcomes#4-1-5-sutva), from @cunningham2021, provides a detailed elaboration on SUTVA. On the other hand, @kamath2023 provide a [chapter](https://appliedcausalinference.github.io/aci_book/02-potential-outcomes-framework.html) elaborating on the rest of the terms.
 
-## Inverse Probability Weights (stages 4 and 5 in the roadmap)
+## Propensity Scores and Inverse Probability Weighting (stages 4 and 5 in the roadmap)
 
-**Week 5** introduces inverse probability weighting (IPW) as the first method in the course for estimating causal effects from observational data. Building on the identifiability assumptions discussed in week 4, we will now focus on the statistical estimation of causal parameters using **weights** derived from the treatment assignment mechanism. Students will be guided through both the conceptual rationale and the mathematical foundations of IPW. Specifically, we will explore how IPW constructs a **pseudo-population in which treatment is independent of confounders**, allowing us to recover the causal estimand from observed data. We will emphasize the critical conditions under which this estimator is valid, particularly the **no unmeasured confounding** and **positivity** assumptions.
+**Week 5** introduces **propensity scores and inverse probability weighting (IPW)** as the first core methods in the course for estimating causal effects from observational data. For a binary treatment, the propensity score $e(L)=P(A=1\mid L)$ provides a particularly useful bridge from students' prerequisite knowledge of binary logistic regression to causal estimation [@rosenbaum1983]. Students first model the treatment-assignment mechanism, inspect overlap and covariate balance, and then translate the estimated propensity scores into weights. The same propensity-score idea can also motivate matching or subclassification as recommended extensions, without requiring a separate full module.
+
+Building on the identifiability assumptions discussed in week 4, we will now focus on the statistical estimation of causal parameters using **weights** derived from the treatment assignment mechanism. Students will be guided through both the conceptual rationale and the mathematical foundations of IPW. Specifically, we will explore how IPW reweights observations to approximate a **pseudo-population in which measured baseline confounders are balanced across treatment groups**. Under assumptions such as consistency, exchangeability/no unmeasured confounding, and positivity, together with appropriate estimation of the treatment mechanism, weighted contrasts can be used to estimate the target causal effect. Students will also examine diagnostics for overlap, covariate balance, and extreme weights.
 
 ![Image by [*Manfred Stege*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/children-teacher-rectangular-figures-7464615/).](img/group.png){width="600"}
 
@@ -249,15 +265,17 @@ The week is divided into two sessions. The first session focuses on developing t
 
 By the end of this lecture, students should be able to:
 
-1. Define IPWs and describe their purpose in causal effect estimation (**remember** level).
-2. Explain how IPW adjusts for measured confounding by reweighting observations to achieve exchangeability (**understand level**).
-3. Examine the assumptions required for valid IPW estimation, including positivity and no unmeasured confounding, and discuss what happens when these assumptions are violated (**analyze** level).
+1. Define the **propensity score** for a binary treatment and explain how it connects the treatment-assignment mechanism to weighting or matching strategies (**remember** and **understand** levels).
+2. Explain how IPW uses propensity scores to reweight observations and balance measured baseline confounders across treatment groups (**understand** level).
+3. Examine the assumptions required for valid IPW estimation, including exchangeability/no unmeasured confounding, positivity, consistency, and adequate treatment-model specification, and discuss consequences of violations (**analyze** level).
+4. Distinguish propensity-score weighting from matching/subclassification, recognizing these as different uses of the same balancing-score idea (**understand** level).
 
-The above goals can be mapped to the following materials:
+The above goals can be mapped to the following materials. For a standard offering, the first two items below are **core**, while the remaining sources serve as recommended depth or extensions:
 
-1. [Chapter 2 (Randomized Experiments)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf), from @hernan2024, where **Section 2.4** specifically introduces IPW in a non-parametric way. Then, [Chapter 12 (IP Weighting and Marginal Estructural Models)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) elaborates on IPW in a parametric way. Also, [Roadmap Step 6B - Estimation with IPW (Lecture 9b - Intro to the IPW Estimator)](https://drive.google.com/file/d/1X1CMuTbRT77tDS9X1RtXSrKRy6Bf02NC/view), from @petersen2014, offers a fair starting point for in-class material.
-2. [Chapter 12 (IP Weighting and Marginal Estructural Models)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) provides a complete technical elaboration. Moreover, [Roadmap Step 6B - Estimation with IPW (Lecture 9b - Intuition and Implementation of IPW)](https://drive.google.com/file/d/1X1CMuTbRT77tDS9X1RtXSrKRy6Bf02NC/view), from @petersen2014, offers a fair starting point for in-class material.
-3. [Chapter 12 (IP Weighting and Marginal Estructural Models)](https://static1.squarespace.com/static/675db8b0dd37046447128f5f/t/6835bdb7dc9e482163d8712d/1748352541538/hernanrobins_WhatIf_27may25.pdf) provides a complete technical elaboration. Furthermore, [Roadmap Step 6B - Estimation with IPW (Lecture 9c - Impact of Positivity Violations on Estimator Performance)](https://drive.google.com/file/d/1X1CMuTbRT77tDS9X1RtXSrKRy6Bf02NC/view), from @petersen2014, offers a fair starting point for in-class material.
+1. **Core:** @rosenbaum1983 provide the foundational definition of the propensity score and explicitly discuss matching and adjustment based on the score. [Chapter 14 (Matching)](https://theeffectbook.net/ch-Matching.html) from @huntington2021 provides a more accessible bridge to propensity-score estimation and matching for students with regression background.
+2. **Core:** [Roadmap Step 6B - Estimation with IPW](https://drive.google.com/file/d/1X1CMuTbRT77tDS9X1RtXSrKRy6Bf02NC/view) from @petersen2014 provides a concise route from the identified estimand to the IPW estimator, including intuition and positivity diagnostics.
+3. **Recommended:** [Chapter 12 (IP Weighting and Marginal Structural Models)](https://miguelhernan.org/whatifbook) from @hernan2024 provides a more technical treatment of IPW and marginal structural models.
+4. **Recommended applied bridge:** @heiss2020 demonstrates how a binary-treatment propensity model can be fitted with familiar regression tools and translated into weights using both `{ipw}` and `{WeightIt}`. Matching/subclassification can be discussed here as alternative uses of propensity scores without requiring a separate required module.
 
 ### Lecture 10 {#sec-lecture-10}
 
@@ -269,11 +287,15 @@ By the end of this lecture, students should be able to:
 
 The above goals can be mapped to the following materials:
 
-1. @ipw provide an overview of the `{ipw}` package with general theoretical background on IPW along with examples via real data. @heiss2020 provides an example via real data to illustrate both the use of `{ipw}` and `{WeightIt}`
-2. @ipw provide an simulated example via the package `{ipw}`.
+1. @ipw provide an overview of the `{ipw}` package with general theoretical background on IPW along with examples via real data. @heiss2020 provides an example via real data to illustrate both the use of `{ipw}` and `{WeightIt}`.
+2. @ipw provide a simulated example via the package `{ipw}`.
 3. [Roadmap Step 6B - Estimation with IPW (Lecture 9c - Impact of Positivity Violations on Estimator Performance)](https://drive.google.com/file/d/1X1CMuTbRT77tDS9X1RtXSrKRy6Bf02NC/view), from @petersen2014, offers a fair starting point for in-class material. Moreover, they provide a [full lab exercise](https://drive.google.com/file/d/1uirofzK0MUZ_JVWHbXpINvTmdVnxpxnd/view) on IPW.
 
-## G-estimation for Causal Parameters (stages 4 and 5 in the roadmap)
+## Optional/Advanced Module: G-estimation for Causal Parameters (stages 4 and 5 in the roadmap)
+
+::: {.callout-important}
+**Status: optional/advanced.** This module is retained because it provides a valuable introduction to longitudinal causal inference and time-varying confounding, but it is **not required in the core thirteen-week pathway**. If omitted, these two sessions can be used to deepen propensity-score/IPW diagnostics and matching, framework translation, or published-paper analysis.
+:::
 
 **Week 6** introduces students to G-estimation methods for identifying and estimating causal parameters. This builds directly on the counterfactual framework and the potential outcomes approach developed in previous weeks. G-estimation enables us to estimate causal effects in the presence of **time-varying confounders**. Students will learn the intuition behind G-estimation and its conceptual connection to **structural nested models (SNMs)**.
 
@@ -309,19 +331,23 @@ By the end of this lecture, students should be able to:
 
 1. Implement G-estimation using different `R` packages (**apply** level).
 2. Simulate longitudinal data under a known data-generating process with time-varying confounding (**apply** level).
-3. Execute model diagnostics on G-estimation modelling (**apply** level). 
+3. Conduct model diagnostics for G-estimation models (**apply** level). 
 
 The above goals can be mapped to the following materials:
 
-1. @loh2023 provide a tutorial on G-estimation using simulated data via the `{lavaan}` package. In contrast, @DTRreg offered a tutorial using the `{DTRreg}` package, employing both totally simulated data and simulated data inspired by real data.
-2. For this learning goal, we can use the work by @loh2023 and @DTRreg Moreover, @wallace2017 provide an additional simulated example via `{DTRreg}`.
+1. @loh2023 provide a tutorial on G-estimation using simulated data via the `{lavaan}` package. In contrast, @DTRreg offer a tutorial using the `{DTRreg}` package, employing both totally simulated data and simulated data inspired by real data.
+2. For this learning goal, we can use the work by @loh2023 and @DTRreg. Moreover, @wallace2017 provide an additional simulated example via `{DTRreg}`.
 3. @rich2010 provide a fair overview on residual diagnostic plots for G-estimation via simulated and real data.
 
-## Causal Mediation Analysis (stages 4 and 5 in the roadmap)
+## Optional/Advanced Module: Causal Mediation Analysis (stages 4 and 5 in the roadmap)
 
-Causal mediation analysis (CMA) allows researchers to go beyond merely estimating total causal effects and to examine the **underlying mechanisms** through which these effects occur. In **week 7**, students will learn how to decompose causal effects into **direct effects** (the part of the treatment effect not explained by a mediator) and **indirect effects** (the portion transmitted through a mediator). By studying mediation analysis within the course framework, students will gain insights into the challenges of making causal claims about underlying mechanisms. This week will also introduce counterfactual definitions of natural direct and indirect effect. Additionally, students will explore how to implement these concepts in practice by linking theoretical assumptions to the modelling framework used in the `{mediation}` R package [@mediation].
+::: {.callout-important}
+**Status: optional/advanced.** This module is retained because mechanism questions arise frequently in applied research, but the identification assumptions and estimands are conceptually demanding. It is **not required in the core thirteen-week pathway**. If omitted, these sessions can instead deepen core propensity-score/IPW work, matching, framework translation, or published-paper appraisal.
+:::
 
-![Image by [*Manfred Stege*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/pixel-cells-pixel-network-3704044/).](img/network){width="400"}
+Causal mediation analysis (CMA) allows researchers to go beyond merely estimating total causal effects and to examine the **underlying mechanisms** through which these effects occur. In **week 7**, students will learn how to decompose causal effects into **direct effects** (the part of the treatment effect not explained by a mediator) and **indirect effects** (the portion transmitted through a mediator). By studying mediation analysis within the course framework, students will gain insights into the challenges of making causal claims about underlying mechanisms. This week will also introduce counterfactual definitions of natural direct and indirect effects. Additionally, students will explore how to implement these concepts in practice by linking theoretical assumptions to the modelling framework used in the `{mediation}` R package [@mediation].
+
+![Image by [*Manfred Stege*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/pixel-cells-pixel-network-3704044/).](img/network.png){width="400"}
 
 The first lecture covers the conceptual foundations of CMA and formal counterfactual definitions of mediation effects. Students will build a solid theoretical understanding by studying concepts such as **average causal mediation effects (ACME)**, **average direct effects (ADE)**, and the assumptions required for their identification, particularly **sequential ignorability**. DAGs will illustrate how mediators function within causal systems and highlight common threats, such as unmeasured mediator–outcome confounding.
 
@@ -347,14 +373,12 @@ The above goals can be mapped to the following materials:
 
 1. **Chapter 2 (Mediation in the Causal Inference Framework)** from @hu2024, specifically **Section 2.2**.
 2. **Chapter 2 (Mediation in the Causal Inference Framework)** from @hu2024, specifically **Section 2.3**.
-3. "*The moderator-mediator variable distinction in social psychological research: conceptual, strategic, and statistical considerations*" by @baron1986.
+3. **Historical/conceptual context:** "*The moderator-mediator variable distinction in social psychological research: conceptual, strategic, and statistical considerations*" by @baron1986. This classic paper is useful for terminology and historical context, but should be paired with the counterfactual causal-mediation sources below rather than used as the identification framework on its own.
 4. There are three potential sources of material we can use to fulfill this goal:
-
   - "*Yes, but what's the mechanism? (don't expect an easy answer)*" from @bullock2010 for experimental studies.
   - "*Identifiability and Exchangeability for Direct and Indirect Effects*" from @robins1992 for observational and experimental studies.
   - "*Causal mediation analysis in economics: Objectives, assumptions, models*" from @celli2021 for quasi-experimental studies.
-
-5. Examples found in @tingley2023.
+5. **Recommended software bridge:** @tingley2014 provides the canonical peer-reviewed description of the `{mediation}` package and worked examples that connect mediator/outcome models to causal estimands and sensitivity analysis.
 
 ### Lecture 14 {#sec-lecture-14}
 
@@ -396,7 +420,7 @@ By the end of this lecture, students should be able to:
 
 ### Overall Material Mapping
 
-This week, we will not map scholarly materials by learning goal. Instead, we will provide a complete set of materials for the entire week:
+This week, we will not map scholarly materials by learning goal. Instead, the following are **recommended instructor resources** from which short student-facing excerpts can be selected; they are not intended as three cumulative required readings:
 
 - [Roadmap Step 6E - Inference &  Step 7 - Interpretation (Lecture 13a - Okay! We have a point estimate; what about a variance estimate?; Lecture 13c - Introduction to the Non-parametric Bootstrap; and Lecture 13d - Interpretation!](https://drive.google.com/file/d/1YX0vn5IbkolzBk4dTG5z_vTIUJ3dD6zH/view), from @petersen2014, offers a fair starting point for in-class material. Moreover, they provide [lab exercises](https://drive.google.com/file/d/1Cl_My-aSS37FuJpYsHcf-NeB4hAYwce7/view) on point and interval estimation.
 - @vonelm2007 provide a whole checklist on the elements that must be included when reporting results on observational studies in epidemiology. It is part of the Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Initiative.
@@ -406,7 +430,7 @@ This week, we will not map scholarly materials by learning goal. Instead, we wil
 
 ![Image by [*Manfred Stege*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/pixel-cells-seminar-conference-3974170/).](img/table.png){width="500"}
 
-In **week 9**, we will focus on the storytelling stage of the course's roadmap. This involves translating the entire statistical research into **a compelling, transparent, and coherent narrative** for the relevant stakeholders. We dedicate a full week to this stage because it is essential to emphasize the technical training from the previous stages while also crafting this final narrative for effective communication with our target audience, which might pertain to technical peers or policy stakeholders. Students are expected to learn how to structure their causal analysis by starting with the study's motivation and research question, followed by the graphical and statistical models, and concluding with interpretable and well-contextualized findings. The primary goal for this week is **to teach students how to integrate the inferential process with effective communication skills**.
+In **week 9**, we will focus on the storytelling stage of the course's roadmap. This involves translating a complete causal analysis into **a compelling, transparent, and coherent narrative** for the relevant stakeholders. We dedicate a full week to this stage because it is essential to emphasize the technical training from the previous stages while also crafting this final narrative for effective communication with our target audience, which might pertain to technical peers or policy stakeholders. Students are expected to learn how to structure their causal analysis by starting with the study's motivation and research question, followed by the graphical and statistical models, and concluding with interpretable and well-contextualized findings. The primary goal for this week is **to teach students how to integrate the inferential process with effective communication skills**.
 
 Students will work with completed causal analyses, specifically the ones from **week 1** in [**lecture 2**](#sec-lecture-2), which were used to distinguish between causal and association questions [@angrist1991; @card1995]. Since these real-life studies are comprehensive, students will be tasked with reframing them into **well-crafted narratives that balance transparency and audience engagement**. On the other hand, the instructor will teach best practices related to data storytelling, scientific writing, and proper DAG elaboration. While the instructor provides instruction and quick examples, students will engage in hands-on practice using one of the two causal analyses mentioned earlier. By the end of the week, students will have a clear understanding of the practical skills needed to narrate a causal analysis from start to finish. This will prepare them for the appraisal and dataset-based projects in the final weeks of the course.
 
@@ -491,13 +515,13 @@ The learning goals outlined below ensure that this appraisal project showcases *
 
 The first lecture of **week 10** will introduce the appraisal project. It will include a clear explanation of the objectives, expectations, and evaluation criteria. During this lecture, the instructor will assign each team a **different published research paper**. These papers will be selected to represent a variety of causal designs, including **experimental**, **quasi-experimental**, and **observational** studies. Each paper will be sufficiently documented to facilitate meaningful team-based analysis. The instructor will provide a detailed background for each paper to ensure that teams can conduct an informed analysis. Teams will be responsible for dissecting the methodological approach, assessing validity, and evaluating the study’s adherence to principles of causal inference.
 
-Following this introduction, teams will spend the rest of **week 10** working collaboratively on their assigned paper. This will involve mapping the study’s design, data, and analysis onto the course’s causal roadmap, identifying strengths and weaknesses, and critiquing methodological choices. Students will be expected to approach matters such as confounding, identifiability, and the data modelling assumptions. The emphasis will be on **deep engagement** with the chosen study rather than superficial summary.
+Following this introduction, teams will spend the rest of **week 10** working collaboratively on their assigned paper. This will involve mapping the study’s design, data, and analysis onto the course’s causal roadmap, identifying strengths and weaknesses, and critiquing methodological choices. Because published papers do not always name the roadmap stages explicitly, teams will also be asked to distinguish what the authors state directly from what must be reconstructed from the design, assumptions, estimand, statistical model, and analysis. Students will be expected to examine issues such as confounding, identifiability, and data-modelling assumptions. The emphasis will be on **deep engagement** with the chosen study rather than superficial summary.
 
 In **week 11**, teams will give in-class presentations on their appraisals. Each team will present its findings in a structured format, emphasizing the alignment (or misalignment) of the published work with the causal roadmap. The presentation should also address the implications for the **robustness** and **interpretability** of the reported causal claims. Presentations will include both technical critiques and clear communication of methodological insights, fostering peer-to-peer learning as students compare and contrast different approaches across various papers. Since the presentation is the **only deliverable** for this appraisal project, teams will be encouraged to focus on clarity, depth of reasoning, and the effective use of visual and statistical evidence to support their assessments.
 
 # Analysis of a Publicly Available Dataset via the Causal Roadmap {#sec-final-analysis}
 
-In the last two weeks of this course (i.e., **weeks 12** and **13**), students will take the lead in executing a team-based project that encompasses every stage of the causal roadmap. This means the instructor will primarily support the students throughout the process, rather than delivering traditional lectures. Note this analysis will serve as a **final capstone project**, summarizing all the content covered in the course from weeks 1 to 9. The project aims to incorporate every stage of the roadmap introduced during the term, which consists of the following eight stages: (1) *research question*, (2) *causal model representing knowledge*, (3) *counterfactuals and causal parameters*, (4) *defining a statistical model*, (5) *model fitting (estimation)*, (6) *interpretation*, (7) *reporting*, and (8) *storytelling*. The student teams will remain the same as those formed during **weeks 10** and **11** for the **previous appraisal of a causal analysis**.
+In the last two weeks of this course (i.e., **weeks 12** and **13**), students will take the lead in executing a team-based project that encompasses every stage of the causal roadmap. This means the instructor will primarily support the students throughout the process, rather than delivering traditional lectures. This analysis will serve as a **final capstone project**, summarizing all the content covered in the course from weeks 1 to 9. The project aims to incorporate every stage of the roadmap introduced during the term, which consists of the following eight stages: (1) *research question*, (2) *causal model representing existing knowledge*, (3) *counterfactuals and causal parameters*, (4) *defining the observed-data and statistical problem*, (5) *model fitting (estimation)*, (6) *interpretation*, (7) *reporting*, and (8) *storytelling*. The student teams will remain the same as those formed during **weeks 10** and **11** for the **previous appraisal of a causal analysis**.
 
 ![Image by [*manfredsteger*](https://pixabay.com/users/manfredsteger-1848497/) via [*Pixabay*](https://pixabay.com/vectors/pixel-cells-pixel-school-enrollment-3702056/).](img/books-2.png){fig-align="center" width=52%}
 
@@ -519,7 +543,7 @@ The learning goals outlined below ensure that this final project demonstrates st
 
 - Apply the causal roadmap to formulate a clearly defined causal research question based on the provided dataset.
 - Construct a comprehensive DAG that represents the assumed causal structure and justifies the variables to condition on.
-- Utilize estimation procedures via `R` (e.g., IPW, G-estimation, or CMA), which should be consistent with the outlined causal model.
+- Utilize an estimation procedure via `R` that is consistent with the causal model and the **implemented course pathway**. Propensity-score/IPW methods provide the standard core option; G-estimation or causal mediation analysis may be used when the corresponding optional/advanced module was taught and is appropriate to the research question.
 
 ### Analyze Level
 
@@ -533,14 +557,14 @@ The learning goals outlined below ensure that this final project demonstrates st
 ### Create Level
 
 - Develop a comprehensive and coherent written report that includes the causal question, methodology, assumptions, and findings in an accessible way to both technical and non-technical audiences.
-- Compile the roadmap stages into a reproducible causal workflow, including code, visualizations, and documentation, to support transparency and reproduciblity.
+- Compile the roadmap stages into a reproducible causal workflow, including code, visualizations, and documentation, to support transparency and reproducibility.
 - Design an executive summary or policy brief from the report tailored to a relevant stakeholder or decision-maker.
 
 ## Weekly Breakdown
 
 At the beginning of **week 12** (specifically, the first in-class session), teams will be introduced to a publicly available dataset, accompanied by a detailed background presentation from the instructor. This presentation will include **relevant contextual, scientific, and structural information necessary** to support a wide range of causal inquiries. Teams will be tasked with formulating their own causal research questions (rather than being provided with predefined inquiries) and must justify their formulations based on the data and background information provided. This approach allows teams to leverage the first stage of the roadmap effectively.
 
-Starting with the second session of **week 12**, teams will conduct their causal analyses using the dataset in conjunction with the eight-stage causal roadmap. They will be expected to iteratively apply concepts such as graphical modelling with DAGs, SCMs, counterfactual definition, identifiability assessment, and appropriate estimation methods, along with interpretation and storytelling. Note that we will use the **same dataset** for all teams, allowing instructors to evaluate different methodological approaches and assumptions reflected in each team’s application of the roadmap.
+Starting with the second session of **week 12**, teams will conduct their causal analyses using the dataset in conjunction with the eight-stage causal roadmap. They will be expected to iteratively apply concepts such as graphical modelling with DAGs, SCMs, counterfactual definitions, identifiability assessment, and appropriate estimation methods, along with interpretation and storytelling. Note that we will use the **same dataset** for all teams, allowing instructors to evaluate different methodological approaches and assumptions reflected in each team’s application of the roadmap.
 
 The last two sessions of the course (i.e., **week 13**) will be structured as **open lab-style working sessions**, where teams can receive feedback from the instructor. This feedback will provide an opportunity for teams to refine their analyses and coordinate roles and responsibilities. The **final deliverable** for this causal analysis will be a comprehensive team report that documents each step of the roadmap, the rationale behind the team’s decisions, diagnostic evaluations, limitations, and their final estimated causal effects.
 

@@ -29,9 +29,16 @@ CanCOTS 2025 featured six different working groups, each focusing on a specific 
 
 Nevertheless, during the group meetings, the specifics of the final deliverable were revised to go beyond experimentation and quasi-experimentation to include observational studies. Additionally, the brainstorming sessions focused more on statistical perspectives rather than a data science approach. As a result, the final deliverable included in this repository has the following specifics:
 
-> Our final deliverable is an overall fourth-year undergraduate course curriculum on causal inference (including a **limited** lesson plan, learning objectives, and an overall structure of the course) based on a general causal inference roadmap of eight stages: (1) *research question*, (2) *causal model representing existing knowledge*, (3) *counterfactuals and causal parameters*, (4) *defining a statistical model*, (5) *model fitting (estimation)*, (6) *interpretation*, (7) *reporting*, and (8) *storytelling*.
+> Our final deliverable is an overall fourth-year undergraduate course curriculum on causal inference (including a **limited** lesson plan, learning objectives, and an overall structure of the course) based on a general causal inference roadmap of eight stages: (1) *research question*, (2) *causal model representing existing knowledge*, (3) *counterfactuals and causal parameters*, (4) *defining the observed-data and statistical problem*, (5) *model fitting (estimation)*, (6) *interpretation*, (7) *reporting*, and (8) *storytelling*.
 
-The above causal inference was inspired on the one used in the course *Introduction to Causal Inference* by @petersen2014.
+The above causal inference **roadmap** was inspired by the one used in the course *Introduction to Causal Inference* by @petersen2014.
+
+
+::: {.callout-note}
+## Scope of the curriculum guideline
+    
+This deliverable is intended as an **adaptable curriculum guideline rather than a prescriptive syllabus**. The lesson-plan materials deliberately provide a broader bank of possible teaching resources than would normally be assigned in a single course offering. Hence, the [course outline](website/02-course-outline.qmd) and [course lesson plan](website/04-course-lesson-plan.qmd) distinguish a **core pathway** from recommended extensions and optional/advanced material so that instructors can calibrate the course to students' preparation, local curricular context, and available instructional time.
+:::
 
 # Website Overview {#sec-website-overview}
 
@@ -46,9 +53,13 @@ This overview illustrates the planning and design materials that shaped the deve
 
 This deliverable grew out of the CanCOTS 2025 working group on incorporating causal inference in statistics courses. Special thanks to [Philippe Boileau](https://pboileau.ca), [Irene Vrbik](https://irene.vrbik.ok.ubc.ca/), and Nicole Babor for their valuable contributions during the working-group sessions, which helped shape the initial direction and foundation of the project.
 
+We also thank the peer reviewers who provided constructive feedback on the scope, sequencing, and presentation of this curriculum guideline. Their comments informed refinements to the distinction between core and advanced material, the connections among causal frameworks, the role of propensity-score methods, and the stated scope of experimental, quasi-experimental, and observational designs.
+
 # Use of Large Language Models 
 
-After the workgroup sessions at CanCOTS 2025, using a large language model (LLM) like ChatGPT [@chatgpt] proved to be moderately useful in brainstorming and organizing learning goals for each lecture, aligning with the plans established during the workgroup sessions. Furthermore, the LLM somehow helped identify scholarly references to consider as potential teaching and learning resources, beyond the textbooks mentioned in the [introductory slides](website/01-intro-slides.qmd). However, it was always necessary to carefully verify and analyze each suggested resource directly from the original source to ensure that none of the references were fabricated by ChatGPT, while also ensuring they were aligned with the course's content scope.
+After the workgroup sessions at CanCOTS 2025, a large language model (LLM), such as ChatGPT [@chatgpt], was used as a supporting tool during parts of the curriculum-development process. It proved moderately useful for brainstorming and organizing lecture-level learning goals in ways that remained aligned with the pedagogical direction established during the workgroup sessions. The LLM was also used to surface scholarly references that could be considered as potential teaching and learning resources beyond the textbooks identified in the [introductory slides](website/01-intro-slides.qmd).
+
+This use of the LLM required substantial human oversight. In particular, suggested references were carefully checked against their original sources, since fabricated or inaccurate citations were a recurring limitation of LLM-generated outputs at the time. Each resource was therefore independently verified for existence, scholarly credibility, relevance to the intended learning goals, and consistency with the scope and level of the proposed course before being incorporated into the deliverable. This process reflects a broader educational leadership principle adopted throughout the project: generative tools may support resource discovery, but decisions about curriculum, pedagogy, evidence, and scholarly quality remain the responsibility of the educators designing and reviewing the learning experience.
 
 # License {#sec-license}
 

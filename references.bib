@@ -31,7 +31,7 @@
   journal = {The Quarterly Journal of Economics},
   volume = {106},
   number = {4},
-  pages = {979-1014},
+  pages = {979--1014},
   year = {1991},
   month = {11},
   abstract = {We establish that season of birth is related to educational attainment because of school start age policy and compulsory school attendance laws. Individuals born in the beginning of the year start school at an older age, and can therefore drop out after completing less schooling than individuals born near the end of the year. Roughly 25 percent of potential dropouts remain in school because of compulsory schooling laws. We estimate the impact of compulsory schooling on earnings by using quarter of birth as an instrument for education. The instrumental variables estimate of the return to education is close to the ordinary least squares estimate, suggesting that there is little bias in conventional estimates.},
@@ -49,7 +49,7 @@
   number = {4},
   pages = {e4009},
   keywords = {backdoor criterion, before-after-control-impact, causal diagrams, causal inference, directed acyclic graphs, instrumental variable, observational data, propensity score, regression discontinuity design, structural causal model},
-  doi = {https://doi.org/10.1002/ecs2.4009},
+  doi = {doi.org/10.1002/ecs2.4009},
   url = {https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecs2.4009},
   eprint = {https://esajournals.onlinelibrary.wiley.com/doi/pdf/10.1002/ecs2.4009},
   abstract = {Abstract Recent developments in computer science have substantially advanced the use of observational causal inference under Pearl's structural causal model (SCM) framework. A key tool in the application of SCM is the use of casual diagrams, used to visualize the causal structure of a system or process under study. Here, we show how causal diagrams can be extended to ensure proper study design under quasi-experimental settings, including propensity score analysis, before-after-control-impact studies, regression discontinuity design, and instrumental variables. Causal diagrams represent a unified approach to variable selection across methodologies and should be routinely applied in ecology research with causal implications.},
@@ -63,7 +63,7 @@
   volume = {13},
   number = {3},
   pages = {e9947},
-  doi = {https://doi.org/10.1002/ece3.9947},
+  doi = {doi.org/10.1002/ece3.9947},
   url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.9947},
   eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.9947},
   note = {e9947 ECE-2023-02-00287.R1},
@@ -110,22 +110,24 @@
   doi = {10.1037/a0018933}
 }
 
-@article{card1995,
-  author = {David Card},
+@incollection{card1995,
+  author = {Card, David},
   title = {Using Geographic Variation in College Proximity to Estimate the Return to Schooling},
-  journal = {Aspects of Labor Market Behaviour: Essays in Honour of John Vanderkamp},
+  booktitle = {Aspects of Labour Market Behaviour: Essays in Honour of John Vanderkamp},
+  editor = {Christofides, L. N. and Grant, E. K. and Swidinsky, R.},
   year = {1995},
-  pages = {201--223},
+  pages = {201--222},
   publisher = {University of Toronto Press},
   address = {Toronto},
-  note = {Also published as NBER Working Paper No. 4483 (1993)}
+  note = {Also circulated as NBER Working Paper No. 4483 (1993)}
 }
 
-@book{carver2016, 
-  journal = {Guidelines for Assessment and Instruction in Statistics Education: College Report 2016}, 
-  author = {R. Carver and M. Everson and J. Gabrosek and N. Horton and R. Lock and M. Mocko and A. Rossman and G. Rowell and P. Velleman and J. Witmer and et al.}, 
+@report{carver2016,
+  author = {{GAISE College Report ASA Revision Committee}},
+  title = {Guidelines for Assessment and Instruction in Statistics Education: College Report 2016},
+  institution = {American Statistical Association},
   year = {2016},
-  publisher = {American Statistical Association}
+  url = {https://www.amstat.org/asa/files/pdfs/gaise/gaisecollege_full.pdf}
 }
 
 @article{celli2021,
@@ -135,10 +137,10 @@
   volume = {36},
   number = {1},
   pages = {214--234},
-  doi = {https://doi.org/10.1111/joes.12452},
-  url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/joes.12452},
-  eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/joes.12452},
-  year = {2021}
+  year = {2022},
+  doi = {10.1111/joes.12452},
+  url = {https://onlinelibrary.wiley.com/doi/10.1111/joes.12452},
+  note = {First published online in 2021}
 }
 
 @misc{chatgpt,
@@ -223,11 +225,13 @@
 }
 
 @book{hernan2024,
-  address = {Boca Raton},
-  author = {Miguel A. Hernán},
-  editor = {James M. Robins},
+  author = {Hernán, Miguel A. and Robins, James M.},
   title = {Causal Inference: What If},
-  year = {2024}
+  year = {2020},
+  publisher = {Chapman \& Hall/CRC},
+  address = {Boca Raton},
+  url = {https://miguelhernan.org/whatifbook},
+  note = {Living online text; online version is periodically revised}
 }
 
 @book{huntington2021,
@@ -320,38 +324,37 @@
 }
 
 @article{manski2019,
-  author = {Charles F. Manski },
+  author = {Manski, Charles F.},
   title = {Communicating uncertainty in policy analysis},
   journal = {Proceedings of the National Academy of Sciences},
   volume = {116},
-  qnumber = {16},
-  pages = {7634-7641},
+  number = {16},
+  pages = {7634--7641},
   year = {2019},
   doi = {10.1073/pnas.1722389115},
-  URL = {https://www.pnas.org/doi/abs/10.1073/pnas.1722389115},
-  eprint = {https://www.pnas.org/doi/pdf/10.1073/pnas.1722389115}
+  url = {https://www.pnas.org/doi/10.1073/pnas.1722389115}
 }
 
-@InCollection{mediation,
+@incollection{mediation,
+  author = {Imai, Kosuke and Keele, Luke and Tingley, Dustin and Yamamoto, Teppei},
   title = {Causal Mediation Analysis Using R},
-  author = {Kosuke Imai and Luke Keele and Dustin Tingley and Teppei Yamamoto},
   booktitle = {Advances in Social Science Research Using R},
+  editor = {Vinod, H. D.},
   year = {2010},
-  editor = {H. D. Vinod},
+  pages = {129--154},
   publisher = {Springer-Verlag},
   address = {New York}
 }
 
 @book{morgan2007,
   author = {Morgan, Stephen L. and Winship, Christopher},
+  title = {Counterfactuals and Causal Inference: Methods and Principles for Social Research},
   year = {2007},
-  title = {Counterfactuals and causal inference: methods and principles for social research},
   publisher = {Cambridge University Press},
-  address = {New York}, 
-  pages = {xiii-xiii},
+  address = {New York},
   edition = {1},
-  keywords = {Causal inference; Causation; Empirical research; Methodology; Research methods; Social research; Social science research; Social sciences; Social sciences -- Methodology; Social sciences -- Research; Social scientists; U.S.A},
-  isbn = {9780511349263;0511349262;0521671930;9780521856157;9780521671934;0521856159;}
+  isbn = {9780521671934},
+  doi = {10.1017/CBO9780511804564}
 }
 
 @misc{petersen2014,
@@ -398,15 +401,15 @@
 }
 
 @article{robins1992,
-  title = {Identifiability and Exchangeability for Direct and Indirect Effects},
   author = {Robins, James M. and Greenland, Sander},
+  title = {Identifiability and Exchangeability for Direct and Indirect Effects},
   journal = {Epidemiology},
   volume = {3},
   number = {2},
   pages = {143--155},
   year = {1992},
-  publisher = {Lippincott Williams \& Wilkins},
-  url = {http://www.jstor.org/stable/3702894}
+  doi = {10.1097/00001648-199203000-00013},
+  url = {https://www.jstor.org/stable/3702894}
 }
 
 @article{rohrer2018,
@@ -415,11 +418,23 @@
   journal = {Advances in Methods and Practices in Psychological Science},
   volume = {1},
   number = {1},
-  pages = {27-42},
+  pages = {27--42},
   year = {2018},
   doi = {10.1177/2515245917745629},
   URL = {https://doi.org/10.1177/2515245917745629},
   eprint = {https://doi.org/10.1177/2515245917745629}
+}
+
+@article{rosenbaum1983,
+  author = {Rosenbaum, Paul R. and Rubin, Donald B.},
+  title = {The Central Role of the Propensity Score in Observational Studies for Causal Effects},
+  journal = {Biometrika},
+  year = {1983},
+  volume = {70},
+  number = {1},
+  pages = {41--55},
+  doi = {10.1093/biomet/70.1.41},
+  url = {https://doi.org/10.1093/biomet/70.1.41}
 }
 
 @article{schulz2010,
@@ -437,13 +452,13 @@
 
 @article{song2016,
   author = {Song, Mingyang and Fung, Teresa T. and Hu, Frank B. and Willett, Walter C. and Longo, Valter D. and Chan, Andrew T. and Giovannucci, Edward L.},
-  year = {2016},
   title = {Association of Animal and Plant Protein Intake With All-Cause and Cause-Specific Mortality},
-  journal = {JAMA internal medicine},
+  journal = {JAMA Internal Medicine},
   volume = {176},
   number = {10},
-  pages = {1453},
-  isbn = {2168-6106;2168-6114;}
+  pages = {1453--1463},
+  year = {2016},
+  doi = {10.1001/jamainternmed.2016.4182}
 }
 
 @article{sterne2002,
@@ -452,20 +467,22 @@
   journal = {The Stata Journal},
   volume = {2},
   number = {2},
-  pages = {164-182},
+  pages = {164--182},
   year = {2002},
   doi = {10.1177/1536867X0200200205},
   URL = {https://doi.org/10.1177/1536867X0200200205},
   eprint = {https://doi.org/10.1177/1536867X0200200205}
 }
 
-@manual{tingley2023,
-  title = {mediation: Causal Mediation Analysis},
+@article{tingley2014,
   author = {Tingley, Dustin and Yamamoto, Teppei and Hirose, Kentaro and Keele, Luke and Imai, Kosuke},
-  year = {2023},
-  organization = {CRAN},
-  note = {R package vignette},
-  url = {https://cran.r-project.org/web/packages/mediation/vignettes/mediation.pdf}
+  title = {mediation: R Package for Causal Mediation Analysis},
+  journal = {Journal of Statistical Software},
+  year = {2014},
+  volume = {59},
+  number = {5},
+  pages = {1--38},
+  doi = {10.18637/jss.v059.i05}
 }
 
 @article{vonelm2007,
@@ -494,14 +511,14 @@
 }
 
 @article{wang2020,
-  author={Wang, Yafeng and Huang, Wentao and O’Neil, Adrienne and Lan, Yutao and Aune, Dagfinn and Wang, Wei and Yu, Chuanhua and Chen, Xiong},
-  year={2020},
-  title={Association between sleep duration and mortality risk among adults with type 2 diabetes: a prospective cohort study},
-  journal={Diabetologia},
-  volume={63},
-  number={11},
-  pages={2292-2304},
-  isbn={0012-186X;1432-0428;},
+  author = {Wang, Yafeng and Huang, Wentao and O'Neil, Adrienne and Lan, Yutao and Aune, Dagfinn and Wang, Wei and Yu, Chuanhua and Chen, Xiong},
+  title = {Association between sleep duration and mortality risk among adults with type 2 diabetes: a prospective cohort study},
+  journal = {Diabetologia},
+  volume = {63},
+  number = {11},
+  pages = {2292--2304},
+  year = {2020},
+  doi = {10.1007/s00125-020-05214-4}
 }
 
 @Manual{weightit,
@@ -510,6 +527,14 @@
   year = {2025},
   note = {R package version 1.4.0},
   url = {https://CRAN.R-project.org/package=WeightIt},
+}
+
+@misc{welch2025,
+  author = {Welch, William J.},
+  title = {{STAT 404: Design and Analysis of Experiments, 2025/26 Term 1}},
+  year = {2025},
+  howpublished = {Course outline, Department of Statistics, University of British Columbia},
+  url = {https://www.stat.ubc.ca/sites/default/files/course_outlines/stat404_outline_2025.pdf}
 }
 
 @article{wood2018,

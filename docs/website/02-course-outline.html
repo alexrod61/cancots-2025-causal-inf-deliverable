@@ -118,7 +118,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -216,11 +215,12 @@ window.Quarto = {
   <li><a href="#pre-requisite-and-co-requisite-courses" id="toc-pre-requisite-and-co-requisite-courses" class="nav-link" data-scroll-target="#pre-requisite-and-co-requisite-courses"><span class="header-section-number">4</span> Pre-requisite and Co-requisite Courses</a>
   <ul>
   <li><a href="#mandatory" id="toc-mandatory" class="nav-link" data-scroll-target="#mandatory"><span class="header-section-number">4.1</span> Mandatory</a></li>
-  <li><a href="#co-requisite" id="toc-co-requisite" class="nav-link" data-scroll-target="#co-requisite"><span class="header-section-number">4.2</span> Co-requisite</a></li>
+  <li><a href="#recommended-co-requisite" id="toc-recommended-co-requisite" class="nav-link" data-scroll-target="#recommended-co-requisite"><span class="header-section-number">4.2</span> Recommended Co-requisite</a></li>
   </ul></li>
   <li><a href="#duration" id="toc-duration" class="nav-link" data-scroll-target="#duration"><span class="header-section-number">5</span> Duration</a></li>
   <li><a href="#sec-course-format" id="toc-sec-course-format" class="nav-link" data-scroll-target="#sec-course-format"><span class="header-section-number">6</span> Course Format</a></li>
-  <li><a href="#sec-course-assessment" id="toc-sec-course-assessment" class="nav-link" data-scroll-target="#sec-course-assessment"><span class="header-section-number">7</span> Course Assessment Structure</a></li>
+  <li><a href="#sec-scope-hierarchy" id="toc-sec-scope-hierarchy" class="nav-link" data-scroll-target="#sec-scope-hierarchy"><span class="header-section-number">7</span> Scope and Content Hierarchy</a></li>
+  <li><a href="#sec-course-assessment" id="toc-sec-course-assessment" class="nav-link" data-scroll-target="#sec-course-assessment"><span class="header-section-number">8</span> Course Assessment Structure</a></li>
   </ul>
 </nav>
     </div>
@@ -262,6 +262,7 @@ window.Quarto = {
 <section id="course-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Course Description</h1>
 <p>This course provides an <strong>introduction to the principles and methods of causal inference</strong>. We will go beyond mere correlation to address questions about cause and effect using real-world data. The course follows a <strong>structured roadmap</strong> composed of eight stages, starting with the fundamentals of constructing and interpreting causal diagrams, which are essential for understanding any data-driven problem where causality is a key inquiry. From there, we will define outcome counterfactuals and apply statistical techniques to estimate causal parameters. Special emphasis will be placed on understanding the assumptions underlying any given causal model while critically evaluating the corresponding claims in real-life scenarios. Furthermore, the course combines theoretical concepts, hands-on computational exercises, and case studies, allowing students to develop the necessary tools to design and analyze causal inquiries effectively.</p>
+<p>Throughout the course, <strong>directed acyclic graph (DAG)/structural-causal-model language and potential-outcome language are presented as complementary but distinct frameworks</strong>: graphical models help make substantive causal assumptions explicit, while potential outcomes define the counterfactual quantities and treatment effects of interest. The <a href="../website/03-course-roadmap.html#sec-course-roadmap">course roadmap</a> makes the connections among these frameworks, identification, statistical models, and estimators explicit.</p>
 </section>
 <section id="high-level-course-goals" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> High-Level Course Goals</h1>
@@ -275,12 +276,49 @@ window.Quarto = {
 <ol type="1">
 <li>Identify and define causal questions across diverse contexts, while recognizing the distinction between association and causation (<strong>remember</strong> and <strong>apply</strong> levels, respectively).</li>
 <li>Translate research questions into the causal roadmap framework (<strong>understand</strong> level).</li>
-<li>Build directed acyclic graphs (DAGs) to represent knowledge about causal inquiries (<strong>apply</strong> level).</li>
-<li>Apply suitable causal inference designs (experimental, quasi-experimental, and observational) and estimation strategies (such as inverse probability weights, G-estimation or causal mediation analysis) to real-world data (<strong>apply</strong> level).</li>
+<li>Build DAGs to represent knowledge about causal inquiries (<strong>apply</strong> level).</li>
+<li>Differentiate the roles of experimental, quasi-experimental, and observational designs (see <a href="#tbl-study-design" class="quarto-xref">Table&nbsp;1</a>), and apply a <strong>core observational estimation strategy based on propensity scores and inverse probability weighting</strong> to real-world data; selectively appraise or apply more advanced methods such as G-estimation or causal mediation analysis when course time and student preparation permit (<strong>apply</strong> level).</li>
+</ol>
+<div id="tbl-study-design" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-study-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Scope and emphasis of major study-design settings in the proposed causal inference course.
+</figcaption>
+<div aria-describedby="tbl-study-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Study-design setting</th>
+<th>Scope in this causal inference course</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Experimental</strong></td>
+<td>Used as the clearest benchmark for identification through randomized treatment assignment and as a setting for applying DAGs, estimands, interpretation, and reporting. Detailed experimental-design mechanics are normally delegated to the recommended co-requisite or prior coursework.</td>
+</tr>
+<tr class="even">
+<td><strong>Quasi-experimental</strong></td>
+<td>Introduced and compared through examples and appraisal activities so students can reason about identification strategies and their assumptions. A standard offering need not attempt exhaustive technical coverage of every quasi-experimental estimator.</td>
+</tr>
+<tr class="odd">
+<td><strong>Observational</strong></td>
+<td>Serves as the primary setting for hands-on adjustment and estimation in the core pathway, especially through DAG-informed confounder selection, propensity scores, and inverse probability weighting (IPW). Advanced longitudinal or mediation methods can be added selectively.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<ol start="5" type="1">
 <li>Analyze real-world data through the causal roadmap, connecting assumptions, identifiability, estimation, and interpretation in a coherent workflow (<strong>analyze</strong> level).</li>
 <li>Assess and criticize causal claims in published research by appraising assumptions, study design, methods, and interpretation (<strong>evaluate</strong> level).</li>
 <li>Communicate the results of a causal analysis to both technical and non-technical audiences through clear storytelling, effective visualization, and transparent discussion of uncertainty (<strong>create</strong> level).</li>
-<li>Execute a complete causal inference project (from question formulation to presentation) via the causal roadmap while integrating critical thinking, methodological rigour, and scholarly communication (<strong>create</strong> level).</li>
+<li>Execute a complete causal inference project (from question formulation through analysis, interpretation, reporting, and storytelling) via the causal roadmap while integrating critical thinking, methodological rigour, and scholarly communication (<strong>create</strong> level).</li>
 </ol>
 </section>
 <section id="pre-requisite-and-co-requisite-courses" class="level1" data-number="4">
@@ -300,27 +338,66 @@ window.Quarto = {
 <li><strong>Third-Year Regression Analysis:</strong> A solid understanding of <strong>ordinary least-squares (OLS)</strong> and <strong>binary logistic regression</strong> would be essential. These skills would allow students to model relationships between variables, which is vital for adjusting confounders or estimating treatment effects. These techniques serve as the analytical foundation for many causal inference methods, including potential outcomes frameworks. A reasonable understanding of modelling assumptions, estimation procedures, and model diagnostics in regression analysis will be expected.</li>
 </ul>
 </section>
-<section id="co-requisite" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="co-requisite"><span class="header-section-number">4.2</span> Co-requisite</h2>
+<section id="recommended-co-requisite" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="recommended-co-requisite"><span class="header-section-number">4.2</span> Recommended Co-requisite</h2>
 <ul>
-<li><strong>Fourth-Year Experimental Design:</strong> A parallel course in experimental design would offer essential theoretical insights into the gold standard of causal inference: the <strong>randomized controlled trial (RCT)</strong>. Students would gain an understanding of the principles of randomization, blocking, and replication. This co-requisite course also connects to the causal inference discussions on the limitations of RCTs and the challenges involved in applying experimental logic to observational data.</li>
+<li><strong>Fourth-Year Experimental Design:</strong> A parallel course in experimental design can provide the detailed theory and practice of randomization, blocking, replication, factorial structures, and related analyses. Within the causal inference course proposed here, randomized experiments are therefore used primarily as a <strong>benchmark for identification by design</strong> and as a setting in which students can apply the causal roadmap, rather than as a second full treatment of experimental-design mechanics. For example, the <a href="https://www.stat.ubc.ca/sites/default/files/course_outlines/stat404_outline_2025.pdf">2025/26 UBC STAT 404 outline</a> <span class="citation" data-cites="welch2025">(<a href="#ref-welch2025" role="doc-biblioref">Welch 2025</a>)</span> already includes randomized-block and factorial designs, blocking, replication, analysis of covariance, and split-plot/repeated-measures designs. A local implementation of this curriculum should similarly avoid unnecessary duplication with its accompanying experimental-design course. Where no such course exists, instructors may need to expand the experimental-design component accordingly.</li>
 </ul>
 </section>
 </section>
 <section id="duration" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Duration</h1>
-<p>The course is planned to be taught over the course of thirteen weeks (2 lectures per week, each with 1.5 hours as duration).</p>
+<p>The course is planned for thirteen weeks, with two 1.5-hour lectures per week. The thirteen-week structure should be interpreted as an <strong>adaptable blueprint</strong>, not as a requirement to cover every topic or every linked resource in equal depth. A standard offering should prioritize the core roadmap and the core estimation module; optional/advanced modules can be selected, shortened, or omitted depending on student background, the surrounding curriculum, and available instructional time.</p>
 </section>
 <section id="sec-course-format" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Course Format</h1>
-<p>This course is designed to integrate theoretical concepts with practical application, giving students a thorough understanding of causal inference methods. The lectures cover foundational topics such as DAGs, counterfactual reasoning, potential outcomes, identification strategies, and the assumptions that underlie causal estimands. Furthermore, more advanced subjects like inverse probability weighting, G-estimation methods, and causal mediation analysis are included. Some lecture sessions will provide students with hands-on experience using real datasets in <code>R</code> <span class="citation" data-cites="r2024">(<a href="#ref-r2024" role="doc-biblioref">R Core Team 2024</a>)</span>. Students will implement estimators, conduct sensitivity analyses, and visualize causal effects during these practical sessions.</p>
+<p>This course is designed to integrate theoretical concepts with practical application while keeping the thirteen-week implementation modular. The <strong>core sequence</strong> covers causal questions, DAGs and causal roles, counterfactual reasoning and potential outcomes, identification, the relationship between causal and statistical estimands, and a first observational estimation strategy based on <strong>propensity scores and IPW</strong>. More specialized topics (most notably, <strong>G-estimation</strong> and <strong>causal mediation analysis (CMA)</strong>) are retained as optional/advanced modules rather than assumed requirements of every offering. Some lecture sessions will provide students with hands-on experience using real datasets in <code>R</code> <span class="citation" data-cites="r2024">(<a href="#ref-r2024" role="doc-biblioref">R Core Team 2024</a>)</span>. Students will implement estimators, conduct sensitivity analyses, and visualize causal effects during these practical sessions.</p>
 </section>
-<section id="sec-course-assessment" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Course Assessment Structure</h1>
+<section id="sec-scope-hierarchy" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Scope and Content Hierarchy</h1>
+<p>The course deliberately separates the <strong>conceptual workflow</strong> from the number of specialized estimators that can fit into one term (see <a href="#tbl-content" class="quarto-xref">Table&nbsp;2</a>). This preserves the roadmap as the common thread while allowing instructors to calibrate technical depth.</p>
+<div id="tbl-content" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-content-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Core, recommended, and optional content for a standard thirteen-week causal inference course.
+</figcaption>
+<div aria-describedby="tbl-content-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Content layer</th>
+<th style="text-align: center;">Intended role in a standard thirteen-week offering</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Core</strong></td>
+<td style="text-align: center;">Research questions; DAGs and causal roles (including confounders, mediators, and colliders); potential outcomes and causal estimands; identification and observed-data implications; propensity scores and IPW; interpretation, reporting, storytelling; and the two synthesis projects.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Recommended extensions</strong></td>
+<td style="text-align: center;">Additional practice with propensity-score diagnostics and matching/subclassification; reconstruction of roadmap stages from published studies; deeper comparison of terminology across disciplines; and selected quasi-experimental examples.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Optional/advanced</strong></td>
+<td style="text-align: center;">Full G-estimation and CMA modules, or other specialized estimators chosen by the instructor. These modules are valuable, but they are not prerequisites for completing the core roadmap.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-course-assessment" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Course Assessment Structure</h1>
 <p>The summative assessment structure of this course is composed of the following elements:</p>
 <ul>
 <li>Biweekly <strong>problem sets</strong> to reinforce both conceptual understanding and methodological proficiency from weeks 1 to 8, totalling four assignments and <strong>accounting for 30% of the course’s final grade</strong>.</li>
-<li>The first group project consisting of an <a href="../website/04-course-lesson-plan.html#sec-appraisal"><strong>appraisal of a published causal study via the causal coadmap</strong></a> <strong>accounting for 30% of the course’s final grade</strong>.</li>
+<li>The first group project consisting of an <a href="../website/04-course-lesson-plan.html#sec-appraisal"><strong>appraisal of a published causal study via the causal roadmap</strong></a> <strong>accounting for 30% of the course’s final grade</strong>.</li>
 <li>The second group project consisting of an <a href="../website/04-course-lesson-plan.html#sec-final-analysis"><strong>analysis of a publicly available dataset via the causal roadmap</strong></a> <strong>accounting for 40% of the course’s final grade</strong>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -349,6 +426,9 @@ Lübke, Karsten, Matthias Gehrke, Jörg Horst, and Gero Szepannek. 2020. <span>�
 </div>
 <div id="ref-r2024" class="csl-entry" role="listitem">
 R Core Team. 2024. <span>“R: A Language and Environment for Statistical Computing.”</span> Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-welch2025" class="csl-entry" role="listitem">
+Welch, William J. 2025. <span>“<span class="nocase">STAT 404: Design and Analysis of Experiments, 2025/26 Term 1</span>.”</span> Course outline, Department of Statistics, University of British Columbia. <a href="https://www.stat.ubc.ca/sites/default/files/course_outlines/stat404_outline_2025.pdf">https://www.stat.ubc.ca/sites/default/files/course_outlines/stat404_outline_2025.pdf</a>.
 </div>
 <div id="ref-wood2018" class="csl-entry" role="listitem">
 Wood, Beverly L., Megan Mocko, Michelle Everson, Nicholas J. Horton, and Paul Velleman. 2018. <span>“Updated Guidelines, Updated Curriculum: The GAISE College Report and Introductory Statistics for the Modern Student.”</span> <em>CHANCE</em> 31 (2): 53–59. <a href="https://doi.org/10.1080/09332480.2018.1467642">https://doi.org/10.1080/09332480.2018.1467642</a>.
